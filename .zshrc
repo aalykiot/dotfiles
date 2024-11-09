@@ -21,6 +21,6 @@ autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
 
-# Something Funny
+# Init Command
 
-fortune | cowsay && echo ""
+echo "\n" && neofetch
