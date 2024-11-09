@@ -2,6 +2,8 @@ brew install --cask raycast
 brew install --cask zen-browser
 brew install --cask font-blex-mono-nerd-font
 brew install --cask wezterm
+brew install --cask visual-studio-code
+brew install neovim
 brew install zsh bat eza
 brew install starship
 brew install zsh-syntax-highlighting zsh-autosuggestions

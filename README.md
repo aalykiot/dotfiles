@@ -5,3 +5,5 @@
 - [Zsh](https://www.zsh.org/) - An extended version of Bash with new features.
 - [WezTerm](https://wezfurlong.org/wezterm/index.html) - A powerful cross-platform terminal emulator and multiplexer.
 - [Starship](https://starship.rs/) - The minimal, blazing-fast, and infinitely customizable prompt for any shell.
+- [NeoVIM](https://neovim.io/) - Hyperextensible Vim-based text editor.
+- [Visual Studio Code](https://code.visualstudio.com/) - Integrated development environment developed by Microsoft.
