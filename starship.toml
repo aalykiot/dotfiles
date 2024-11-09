@@ -13,6 +13,7 @@ style = 'bold #665BAE'
 symbol = ' '
 
 [git_status]
-format = '[$modified$staged](bold #E6ECC0)'
+disabled = false
+format = '[$modified](bold #F7768E)[$staged](bold #E6ECC0)'
 modified = '\[!\] '
 staged = '\[+\] '
