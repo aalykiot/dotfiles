@@ -1,6 +1,6 @@
 brew install --cask raycast \
 arc \
-font-blex-mono-nerd-font \
+font-fira-code-nerd-font \
 wezterm \
 visual-studio-code
 
