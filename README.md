@@ -23,7 +23,7 @@ $ brew install stow
 First, check out the `dev-setup` repo in your $HOME directory using git:
 
 ```sh
-$ git clone git@github.com/aalykiot/dev-setup
+$ git clone git@github.com/aalykiot/dotfiles
 $ cd dev-setup
 ```
 
