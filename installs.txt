@@ -1,5 +1,5 @@
 brew install --cask raycast \
-zen-browser \
+arc \
 font-blex-mono-nerd-font \
 wezterm \
 visual-studio-code
@@ -11,5 +11,6 @@ eza \
 starship \
 zsh-syntax-highlighting \
 zsh-autosuggestions \
-neofetch \
+fortune \
+cowsay \
 fzf

@@ -1,17 +1,18 @@
 format = '$directory$git_branch$git_status[\$](bold) '
 
-# Don't print a nre line at the start of the prompt.
 add_newline = false
 
 [directory]
 fish_style_pwd_dir_length = 1
-style = 'bold #9A9AB7'
+style = 'bold #737aa2'
 
 [git_branch]
 format = 'on [$symbol$branch]($style) '
-style = 'bold #665BAE'
+style = 'bold #7aa2f7'
 symbol = ' '
 
 [git_status]
-format = '([$all_status$ahead_behind]($style) )'
-style = "bold red"
+format = '([$modified$staged]($style) )'
+style = "bold #ff757f"
+modified = "✘"
+staged = "✘"

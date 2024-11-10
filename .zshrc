@@ -19,8 +19,6 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source <(fzf --zsh)
 
-alias ff='nvim $(fzf -m --preview="bat --color=always {}")'
-
 # Tab Selection
 
 autoload -Uz compinit
@@ -29,4 +27,4 @@ zstyle ':completion:*' menu select
 
 # Init Command
 
-echo "\n" && neofetch
+fortune | cowsay && echo ""
