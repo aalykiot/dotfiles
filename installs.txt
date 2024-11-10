@@ -11,4 +11,5 @@ eza \
 starship \
 zsh-syntax-highlighting \
 zsh-autosuggestions \
-neofetch
+neofetch \
+fzf
