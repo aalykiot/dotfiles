@@ -12,7 +12,7 @@ style = 'bold #7aa2f7'
 symbol = ' '
 
 [git_status]
-format = '([$modified$staged]($style) )'
+format = '([$modified]($style)[$staged]($style) )'
 style = "bold #ff757f"
 modified = "✘"
 staged = "✘"

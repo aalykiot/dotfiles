@@ -13,4 +13,5 @@ zsh-syntax-highlighting \
 zsh-autosuggestions \
 fortune \
 cowsay \
-fzf
+fzf \
+lazygit
