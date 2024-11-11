@@ -2,7 +2,8 @@ brew install --cask raycast \
 arc \
 font-fira-code-nerd-font \
 wezterm \
-visual-studio-code
+visual-studio-code \
+nikitabobko/tap/aerospace
 
 brew install neovim \
 zsh \

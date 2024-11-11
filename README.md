@@ -42,3 +42,5 @@ $ stow .
 - [Starship](https://starship.rs/) - The minimal, blazing-fast, and infinitely customizable prompt for any shell.
 - [NeoVim](https://neovim.io/) - Hyperextensible Vim-based text editor.
 - [Visual Studio Code](https://code.visualstudio.com/) - Integrated development environment developed by Microsoft.
+- [Aerospace](https://nikitabobko.github.io/AeroSpace/guide) - An i3-like tiling window manager for macOS.
+- [LazyGit](https://github.com/jesseduffield/lazygit) - Simple terminal UI for git commands.
