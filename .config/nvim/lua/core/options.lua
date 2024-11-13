@@ -24,15 +24,14 @@ end)
 -- Use spaces instead of tabs
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.expandtab = false
+vim.opt.expandtab = true
+vim.opt.autoindent = true
 
 vim.opt.signcolumn = 'yes'
 
 -- Disbale line wrap as default
 vim.opt.wrap = false
 vim.opt.linebreak = false
-vim.opt.list = false
 
 -- Update times
 vim.opt.updatetime = 250
@@ -45,6 +44,9 @@ vim.opt.splitbelow = true
 -- Displaying special characters
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+-- Make backspace work properly
+vim.opt.backspace = 'indent,eol,start'
 
 -- Preview substitution live, as you type
 vim.opt.inccommand = 'split'
