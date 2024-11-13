@@ -22,12 +22,17 @@ vim.schedule(function()
 end)
 
 -- Use spaces instead of tabs
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = false
 
 vim.opt.signcolumn = 'yes'
+
+-- Disbale line wrap as default
+vim.opt.wrap = false
+vim.opt.linebreak = false
+vim.opt.list = false
 
 -- Update times
 vim.opt.updatetime = 250

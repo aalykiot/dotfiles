@@ -9,8 +9,8 @@ end
 config.automatically_reload_config = true
 config.window_close_confirmation = "NeverPrompt"
 config.line_height = 1.2
-config.font_size = 14
-config.font = wezterm.font("Fira Code")
+config.font_size = 15 
+config.font = wezterm.font("SF Mono")
 config.enable_tab_bar = true
 config.window_decorations = "RESIZE"
 config.color_scheme = "Tokyo Night"

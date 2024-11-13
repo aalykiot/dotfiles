@@ -42,5 +42,6 @@ vim.keymap.set('v', '>', '>gv')
 -- Keep last yanked when pasting
 vim.keymap.set('v', 'p', '"_dP')
 
--- Toggle neotree
-vim.keymap.set('n', '<C-/>', ':Neotree toggle<CR>')
+-- Neotree
+vim.keymap.set('n', '<C-/>', ':Neotree left reveal=true<CR>', { desc = 'Open neotree view' })
+vim.keymap.set('n', '<leader>ot', ':Neotree float<CR>', { desc = 'Open floating neotree view' })
