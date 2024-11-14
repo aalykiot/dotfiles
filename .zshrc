@@ -15,6 +15,8 @@ alias lt2="eza -lTg --level=2 --icons"
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+export BAT_THEME="Nord"
+
 # Fzf
 
 source <(fzf --zsh)
