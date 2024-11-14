@@ -2,38 +2,21 @@
 
 This repo contains installation scripts and dotfiles for my system.
 
-## Requirements
-
-Ensure you have the following installed on your system.
-
-### Git
-
-```sh
-$ brew install git
-```
-
-### Stow
-
-```sh
-$ brew install stow
-```
-
 ## Installation
 
-First, check out the `dev-setup` repo in your $HOME directory using git:
+First, check out the `dotifiles` repo in your $HOME directory using git:
 
 ```sh
-$ git clone git@github.com/aalykiot/dotfiles
-$ cd dev-setup
+$ git clone git@github.com/aalykiot/dotfiles .dotfiles
 ```
 
-then use GNU stow to create symlinks:
+then, use the `install.sh` script to install packages and symlink the configuration files. 
 
 ```sh
-$ stow .
+$ cd .dotfiles/ && ./install.sh
 ```
 
-## Cask Packages
+## Notable Packages
 
 - [Raycast](https://raycast.com) - A collection of powerful productivity tools all within an extendable launcher.
 - [Arc Browser](https://arc.net/) - Arc is a freeware web browser developed by The Browser Company.

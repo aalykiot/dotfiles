@@ -1,0 +1,27 @@
+# Specify a directory to install casks
+
+cask_args appdir: '/Applications'
+
+tap 'homebrew/cask' || true
+tap 'homebrew/cask-versions' || true
+
+# Install packages
+
+brew 'zsh'
+brew 'zsh-syntax-highlighting'
+brew 'zsh-autosuggestions'
+brew 'bat'
+brew 'eza'
+brew 'starship'
+brew 'fortune'
+brew 'cowsay'
+brew 'fzf'
+brew 'neovim'
+brew 'lazygit'
+brew 'stow'
+
+cask 'raycast'
+cask 'arc'
+cask 'wezterm'
+cask 'visual-studio-code'
+cask 'nikitabobko/tap/aerospace'
