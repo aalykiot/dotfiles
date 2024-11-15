@@ -1,4 +1,5 @@
-format = '$directory$git_branch$git_status[\$](bold) '
+format = '$directory$character'
+right_format = '$git_branch$git_status'
 
 add_newline = false
 
@@ -11,7 +12,3 @@ format = 'on [$symbol$branch]($style) '
 style = 'bold #7aa2f7'
 symbol = ' '
 
-[git_status]
-format = '([$modified]($style) )'
-style = "bold #ff757f"
-modified = "✘"
