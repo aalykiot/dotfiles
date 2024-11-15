@@ -50,4 +50,5 @@ vim.keymap.set('v', 'p', '"_dP')
 
 -- Neotree
 vim.keymap.set('n', '<C-/>', ':Neotree left reveal=true<CR>', { desc = 'Open neotree view' })
-vim.keymap.set('n', '<leader>ot', ':Neotree float<CR>', { desc = 'Open floating neotree view' })
+vim.keymap.set('n', '<leader>ot', ':Neotree float<CR>', { desc = '[O]pen floating neo[T]ree view' })
+
