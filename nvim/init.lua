@@ -19,5 +19,6 @@ require('lazy').setup({
   require('plugins.neotree'),
   require('plugins.treesitter'),
   require('plugins.lualine'),
-  require('plugins.which-key')
+  require('plugins.which-key'),
+  require('plugins.telescope')
 })
