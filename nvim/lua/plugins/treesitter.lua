@@ -1,15 +1,41 @@
--- Highlight, edit, and navigate code
+-- Highlight, edit, and navigate code.
 return {
   'nvim-treesitter/nvim-treesitter',
+  event = { 'BufReadPre', 'BufNewFile' },
   build = ':TSUpdate',
+  dependencies = {
+    'windwp/nvim-ts-autotag',
+  },
   main = 'nvim-treesitter.configs',
-  opts = {
-    ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'go', 'javascript', 'jsdoc', 'json', 'json5', 'proto', 'python', 'tsx', 'typescript', 'sql', 'prisma', 'rust' },
+  opts = { 
     auto_install = true,
-    highlight = {
-      enable = true,
-      additional_vim_regex_highlighting = { 'ruby' },
+    indent = { enable = true },
+    highlight = { enable = true },
+    autotag = { enable = true },
+    ensure_installed = {
+      'bash',
+      'c',
+      'diff',
+      'html',
+      'lua',
+      'luadoc',
+      'markdown',
+      'markdown_inline',
+      'query',
+      'vim',
+      'vimdoc',
+      'go',
+      'javascript',
+      'jsdoc',
+      'json',
+      'json5',
+      'proto',
+      'python',
+      'tsx',
+      'typescript',
+      'sql',
+      'prisma',
+      'rust'
     },
-    indent = { enable = true, disable = { 'ruby' } },
   }
 }
