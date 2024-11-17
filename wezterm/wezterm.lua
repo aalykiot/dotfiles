@@ -14,10 +14,10 @@ config.font = wezterm.font("Fira Code", { weight = "Medium" })
 config.enable_tab_bar = true
 -- config.window_decorations = "RESIZE"
 config.color_scheme = "Tokyo Night"
--- config.use_fancy_tab_bar = false
--- config.tab_bar_at_bottom = true
-config.enable_tab_bar = false
-config.tab_and_split_indices_are_zero_based = false
+config.use_fancy_tab_bar = false
+config.tab_bar_at_bottom = true
+config.enable_tab_bar = true
+config.switch_to_last_active_tab_when_closing_tab = true
 -- config.window_background_opacity = 0.85
 -- config.macos_window_background_blur= 20
 config.window_padding = {
@@ -108,10 +108,10 @@ config.keys = {
   close_pane("x"),
 }
 
-for i = 0, 9 do
+for i = 0, 8 do
   -- LEADER + num to activate that tab
   table.insert(config.keys, {
-    key = tostring(i),
+    key = tostring(i+1),
     mods = "LEADER",
     action = wez_action.ActivateTab(i),
   })
