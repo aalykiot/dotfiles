@@ -7,7 +7,7 @@ return {
     'windwp/nvim-ts-autotag',
   },
   main = 'nvim-treesitter.configs',
-  opts = { 
+  opts = {
     auto_install = true,
     indent = { enable = true },
     highlight = { enable = true },

@@ -9,23 +9,22 @@ return {
       options = {
         icons_enabled = true,
         theme = 'auto',
-        component_separators = { left = '', right = ''},
+        component_separators = { left = '┊', right = '┊'},
         section_separators = { left = '', right = ''},
         disabled_filetypes = { 'neo-tree' },
         always_divide_middle = true,
       },
       sections = {
         lualine_a = { 'mode' },
-        lualine_b = { 'branch', 'diff', 'diagnostics' },
-        lualine_c = {
-          { 'filename', path = 1 },
-        },
-        lualine_x = { 
+        lualine_b = { 'branch' },
+        lualine_c = { { 'filename', path = 1 } },
+        lualine_x = {
           {
             lazy_status.updates,
             cond = lazy_status.has_updates,
             color = { fg = '#ff9e64' },
           },
+          'diagnostics',
           'encoding',
           {
             'filetype',

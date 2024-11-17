@@ -37,10 +37,11 @@ return {
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
-        ['<C-y>'] = cmp.mapping.confirm({ select = false }),
+        ['<CR>'] = cmp.mapping.confirm({ select = false }),
       }),
       -- Define a list of sources.
       sources = cmp.config.sources({
+        { name = 'nvim_lsp' }, -- LSP.
         { name = 'luasnip' }, -- Snippets.
         { name = 'buffer' }, -- Text within current buffer.
         { name = 'path' }, -- File system paths.
