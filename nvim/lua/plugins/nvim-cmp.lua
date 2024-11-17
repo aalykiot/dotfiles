@@ -16,7 +16,7 @@ return {
   config = function()
     local cmp = require('cmp')
     local luasnip = require('luasnip')
-    local lspkind = require(clspkindc)
+    local lspkind = require('lspkind')
 
     -- Loads vscode snippets from installed plugins (e.g friendly-snippets)
     require('luasnip.loaders.from_vscode').lazy_load()
