@@ -17,7 +17,9 @@ return {
       sections = {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
-        lualine_c = { { 'filename', path = 1 } },
+        lualine_c = {
+          { 'filename', path = 1 },
+        },
         lualine_x = { 
           {
             lazy_status.updates,
@@ -25,6 +27,10 @@ return {
             color = { fg = '#ff9e64' },
           },
           'encoding',
+          {
+            'filetype',
+            icon_only = true,
+          }
         },
         lualine_y = { 'location' },
         lualine_z = { 'progress' },
