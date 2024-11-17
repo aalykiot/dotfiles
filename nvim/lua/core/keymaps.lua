@@ -39,7 +39,3 @@ vim.keymap.set('v', '>', '>gv')
 
 -- Keep last yanked when pasting
 vim.keymap.set('v', 'p', '"_dP')
-
--- Neotree
-vim.keymap.set('n', '<leader>e', ':Neotree toggle reveal=true<CR>', { desc = 'Open file [E]xplorer' })
-

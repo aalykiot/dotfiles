@@ -7,7 +7,10 @@ return  {
     'MunifTanjim/nui.nvim',
   },
   config = function()
-    require('neo-tree').setup({
+    local neotree = require("neo-tree")
+
+    -- Default options.
+    neotree.setup({
       filesystem = {
         filtered_items = {
           visible = true,
@@ -20,5 +23,8 @@ return  {
         width = 30,
       },
     })
+
+    -- Setting up the keymaps.
+    vim.keymap.set('n', '<leader>e', ':Neotree toggle reveal=true<CR>', { desc = 'Open file [E]xplorer' })
   end,
 }

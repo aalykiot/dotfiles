@@ -12,13 +12,12 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end 
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
-  -- Detect tabstop and shiftwidth automatically
-  'tpope/vim-sleuth',
-  require('plugins.theme'), 
-  require('plugins.neotree'),
-  require('plugins.treesitter'),
-  require('plugins.lualine'),
-  require('plugins.which-key'),
-  require('plugins.telescope')
+require('lazy').setup('plugins', {
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    notify = false,
+  }
 })
