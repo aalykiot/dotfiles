@@ -1,10 +1,10 @@
 # My dotfiles 👨‍💻
 
-These are the dotfiles that configure the tools I use in my system, and some installation scripts that automatically install all the following packages. I constantly try to improve my development workflow. 
+These are the dotfiles that configure the tools I use in my system, and some installation scripts that automatically install all the following packages. I constantly try to improve my development workflow.
 
 ### Setup
 
-First, clone the `dotifiles` repo in your `$HOME` directory:
+First, clone the repo in your `$HOME` directory:
 
 ```sh
 $ git clone git@github.com/aalykiot/dotfiles
