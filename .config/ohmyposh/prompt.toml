@@ -1,0 +1,39 @@
+# console_title_template = '{{ .Shell }} in {{ .Folder }}'
+# version = 3
+# final_space = true
+
+schema = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+final_space = true
+version = 3
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+
+[[blocks.segments]]
+type = "text"
+foreground = "#98C379"
+style = "plain"
+template = "➜"
+
+[[blocks.segments]]
+type = "path"
+foreground = "#56B6C2"
+style = "plain"
+template = " {{ .Path }} "
+[blocks.segments.properties]
+style = "folder"
+
+[[blocks.segments]]
+type = "git"
+foreground = "#D0666F"
+style = "plain"
+template = "<#5FAAE8>git:(</>{{ .HEAD }}<#5FAAE8>)</>"
+[blocks.segments.properties]
+branch_icon = ""
+
+[[blocks.segments]]
+type = "status"
+foreground = "#BF616A"
+style = "plain"
+template = " ✗"
