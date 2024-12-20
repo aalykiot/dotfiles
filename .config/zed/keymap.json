@@ -15,7 +15,10 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-`": "workspace::ToggleBottomDock"
+      "ctrl-`": "workspace::ToggleBottomDock",
+      "space s f": "file_finder::Toggle",
+      "space t": "workspace::NewCenterTerminal",
+      "space e": "workspace::ToggleLeftDock"
     }
   },
   {
@@ -24,8 +27,6 @@
       "space p": "editor::Paste",
       "space b": "editor::ToggleGitBlame",
       "space space": "tab_switcher::Toggle",
-      "space t": "workspace::NewCenterTerminal",
-      "space s f": "file_finder::Toggle",
       "space s p": "pane::DeploySearch",
       "space s h": "pane::SplitDown",
       "space s v": "pane::SplitRight",
