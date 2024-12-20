@@ -4,7 +4,7 @@ These are the dotfiles that configure the tools I use in my system, and some ins
 
 ### Setup
 
-First, check out the `dotifiles` repo in your `$HOME` directory using git:
+First, clone the `dotifiles` repo in your `$HOME` directory:
 
 ```sh
 $ git clone git@github.com/aalykiot/dotfiles
@@ -16,7 +16,7 @@ then, use the `install.sh` script to install the packages:
 $ cd dotfiles/ && ./install.sh
 ```
 
-finally, symlink the config files to the right place:
+finally, symlink the config files to the right places:
 
 ```sh
 $ stow .

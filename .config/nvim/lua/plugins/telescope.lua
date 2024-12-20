@@ -32,6 +32,10 @@ return {
                         ['<C-k>'] = require('telescope.actions').move_selection_previous,
                     },
                 },
+                file_ignore_patterns = {
+                    'node_modules',
+                    '.git',
+                },
             },
             pickers = {
                 find_files = {
