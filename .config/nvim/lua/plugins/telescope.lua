@@ -33,6 +33,11 @@ return {
                     },
                 },
             },
+            pickers = {
+                find_files = {
+                    hidden = true,
+                },
+            },
         })
 
         -- Enable Telescope extensions if they are installed
