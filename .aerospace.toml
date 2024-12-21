@@ -93,12 +93,6 @@ outer.right = 5
 # end tell'
 # '''
 
-# Use floating layout for some specific apps
-# https://nikitabobko.github.io/AeroSpace/guide#on-window-detected-callback
-[[on-window-detected]]
-check-further-callbacks = true
-run = 'layout floating'
-
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
@@ -199,4 +193,10 @@ E = 'secondary'
 R = 'secondary'
 T = 'secondary'
 Y = 'secondary'
+
+# Use floating layout for some specific apps
+# https://nikitabobko.github.io/AeroSpace/guide#on-window-detected-callback
+[[on-window-detected]]
+check-further-callbacks = true
+run = 'layout floating'
 

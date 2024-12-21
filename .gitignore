@@ -1,0 +1,4 @@
+# Track only zed setup files
+.config/zed/*
+!.config/zed/settings.json
+!.config/zed/keymap.json

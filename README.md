@@ -10,10 +10,10 @@ First, clone the repo in your `$HOME` directory:
 $ git clone git@github.com/aalykiot/dotfiles
 ```
 
-then, use the `install.sh` script to install the packages:
+then, use `make` to install the required packages:
 
 ```sh
-$ cd dotfiles/ && ./install.sh
+$ cd dotfiles/ && make install
 ```
 
 finally, symlink the config files to the right places:
