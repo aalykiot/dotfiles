@@ -15,10 +15,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-`": "workspace::ToggleBottomDock",
-      "space s f": "file_finder::Toggle",
-      "space t": "workspace::NewCenterTerminal",
-      "space e": "workspace::ToggleLeftDock"
+      "ctrl-`": "workspace::ToggleBottomDock"
     }
   },
   {
@@ -31,6 +28,9 @@
       "space s h": "pane::SplitDown",
       "space s v": "pane::SplitRight",
       "space x x": "diagnostics::Deploy",
+      "space s f": "file_finder::Toggle",
+      "space t": "workspace::NewCenterTerminal",
+      "space e": "workspace::ToggleLeftDock",
       "n": "search::SelectNextMatch",
       "shift-n": "search::SelectPrevMatch",
       "shift-k": "editor::Hover",
