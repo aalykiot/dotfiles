@@ -2,9 +2,6 @@
 
 cask_args appdir: '/Applications'
 
-tap 'homebrew/cask' || true
-tap 'homebrew/cask-versions' || true
-
 # Install packages
 
 brew 'zsh'
@@ -18,6 +15,7 @@ brew 'neovim'
 brew 'lazygit'
 brew 'stow'
 brew 'ripgrep'
+brew 'oh-my-posh'
 
 cask 'raycast'
 cask 'arc'
