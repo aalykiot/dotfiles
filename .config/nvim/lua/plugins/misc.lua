@@ -63,4 +63,12 @@ return {
             require('barbecue').setup()
         end,
     },
+    -- Closing buffers
+    {
+        'kazhala/close-buffers.nvim',
+        config = function()
+            require('close_buffers').setup()
+            vim.keymap.set('n', '<C-q>', '<cmd>BDelete! this<CR>', { desc = 'Close active buffer' })
+        end,
+    },
 }

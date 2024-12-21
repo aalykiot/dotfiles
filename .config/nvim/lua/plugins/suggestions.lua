@@ -4,9 +4,12 @@ return {
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-buffer',
+        'onsails/lspkind.nvim',
     },
     config = function()
         local cmp = require('cmp')
+        local lspkind = require('lspkind')
+
         cmp.setup({
             mapping = cmp.mapping.preset.insert({
                 ['<C-j>'] = cmp.mapping.select_next_item(),
@@ -28,9 +31,6 @@ return {
                 { name = 'buffer' },
                 { name = 'crates' },
             }),
-            completion = {
-                keyword_length = 2,
-            },
             performance = {
                 max_view_entries = 7,
             },
@@ -38,6 +38,20 @@ return {
                 docs = {
                     auto_open = false,
                 },
+            },
+            formatting = {
+                fields = { 'kind', 'abbr', 'menu' },
+                format = function(entry, vim_item)
+                    local menu_map = {
+                        nvim_lsp = '[LSP]',
+                        buffer = '[Buffer]',
+                        path = '[Path]',
+                        crates = '[Crates]',
+                    }
+                    vim_item.kind = string.format('%s', lspkind.symbol_map[vim_item.kind])
+                    vim_item.menu = menu_map[entry.source.name]
+                    return vim_item
+                end,
             },
         })
     end,
