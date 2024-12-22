@@ -31,6 +31,7 @@
       "space s f": "file_finder::Toggle",
       "space t": "workspace::NewCenterTerminal",
       "space e": "workspace::ToggleLeftDock",
+      "space f": "editor::Format",
       "n": "search::SelectNextMatch",
       "shift-n": "search::SelectPrevMatch",
       "shift-k": "editor::Hover",
