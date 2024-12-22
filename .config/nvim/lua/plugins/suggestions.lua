@@ -31,9 +31,6 @@ return {
                 { name = 'buffer' },
                 { name = 'crates' },
             }),
-            performance = {
-                max_view_entries = 7,
-            },
             view = {
                 docs = {
                     auto_open = false,
@@ -46,9 +43,9 @@ return {
                         nvim_lsp = '[LSP]',
                         buffer = '[Buffer]',
                         path = '[Path]',
-                        crates = '[Crates]',
+                        crates = '[Crates.io]',
                     }
-                    vim_item.kind = string.format('%s', lspkind.symbol_map[vim_item.kind])
+                    vim_item.kind = string.format('%s', lspkind.symbol_map[vim_item.kind] or '')
                     vim_item.menu = menu_map[entry.source.name]
                     return vim_item
                 end,

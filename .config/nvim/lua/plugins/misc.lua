@@ -16,6 +16,13 @@ return {
             require('nvim-surround').setup()
         end,
     },
+    -- Notifications
+    {
+        'j-hui/fidget.nvim',
+        config = function()
+            require('fidget').setup()
+        end,
+    },
     -- Git indications
     {
         'lewis6991/gitsigns.nvim',
