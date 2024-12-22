@@ -22,6 +22,8 @@ finally, symlink the config files to the right places:
 $ stow .
 ```
 
+> For VSCode we need to manually symlink the settings.json: `ln -s <TARGET> <LINK-NAME>`
+
 ## Tools and Packages
 
 - [Raycast](https://raycast.com) - A collection of powerful productivity tools all within an extendable launcher.
