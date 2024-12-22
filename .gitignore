@@ -2,3 +2,6 @@
 .config/zed/*
 !.config/zed/settings.json
 !.config/zed/keymap.json
+
+# Don't track lock file from lazy.nvim
+.config/nvim/lazy-lock.json
