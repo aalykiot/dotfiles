@@ -16,18 +16,21 @@ vim.schedule(function()
     vim.opt.clipboard = 'unnamedplus'
 end)
 
--- Options about lines/wrapping
+-- Wrap text
 vim.opt.breakindent = true
+
 vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
 vim.opt.signcolumn = 'yes'
+
+vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
-vim.opt.expandtab = true
 
--- Options about time
+-- Time
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 
@@ -37,7 +40,7 @@ vim.opt.splitbelow = true
 
 -- White space indication
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = '  ', trail = '·', nbsp = '␣' }
 
 vim.opt.inccommand = 'split'
 
