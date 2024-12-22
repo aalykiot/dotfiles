@@ -25,7 +25,6 @@ $ stow .
 ## Tools and Packages
 
 - [Raycast](https://raycast.com) - A collection of powerful productivity tools all within an extendable launcher.
-- [Arc Browser](https://arc.net/) - Arc is a freeware web browser developed by The Browser Company.
 - [Aerospace](https://nikitabobko.github.io/AeroSpace/guide) - An i3-like tiling window manager for MacOS.
 - [Zsh](https://www.zsh.org/) - An extended version of Bash with new features.
 - [Oh My Posh](https://ohmyposh.dev/) - A prompt theme engine for any shell.
