@@ -7,6 +7,10 @@ if [ ! -d "$ZINIT_HOME" ]; then
   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
+# Export nvm completion settings for zsh-nvm plugin
+export NVM_COMPLETION=true
+export NVM_LAZY_LOAD=true
+
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
@@ -15,6 +19,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
+zinit light lukechilds/zsh-nvm
 
 # Load completions
 autoload -U compinit && compinit
