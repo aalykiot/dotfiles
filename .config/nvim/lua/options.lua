@@ -17,6 +17,7 @@ vim.schedule(function()
 end)
 
 -- Wrap text
+vim.opt.wrap = false
 vim.opt.breakindent = true
 
 vim.opt.undofile = true

@@ -18,9 +18,9 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Window management
-vim.keymap.set('n', '<leader>sv', '<C-w>v', { desc = 'Split window vertically' })
-vim.keymap.set('n', '<leader>sh', '<C-w>s', { desc = 'Split window horizontally' })
-vim.keymap.set('n', '<leader>se', '<C-w>=', { desc = 'Make splits equal size' })
+vim.keymap.set('n', '<leader>wsv', '<C-w>v', { desc = 'Split window vertically' })
+vim.keymap.set('n', '<leader>wsh', '<C-w>s', { desc = 'Split window horizontally' })
+vim.keymap.set('n', '<leader>wse', '<C-w>=', { desc = 'Make splits equal size' })
 
 -- Hightlight when yanking
 vim.api.nvim_create_autocmd('TextYankPost', {
