@@ -194,9 +194,9 @@ R = 'secondary'
 T = 'secondary'
 Y = 'secondary'
 
-# Use floating layout for some specific apps
+# Use floating layout for new windows
 # https://nikitabobko.github.io/AeroSpace/guide#on-window-detected-callback
-# [[on-window-detected]]
-# check-further-callbacks = true
-# run = 'layout floating'
+[[on-window-detected]]
+check-further-callbacks = true
+run = 'layout floating'
 
