@@ -1,9 +1,9 @@
 theme = iterm2 Pastel Dark Background
 font-size = 14
 font-feature = -calt
-cursor-style = bar
+cursor-style = block
 adjust-cell-height = 10%
-shell-integration-features = cursor,no-sudo,title
+shell-integration-features = no-cursor,no-sudo,title
 shell-integration = zsh
 window-padding-x = 6
 window-padding-balance = true
