@@ -18,11 +18,12 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
 zinit light lukechilds/zsh-nvm
 
 # Load completions
-autoload -U compinit && compinit
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
 
 # To customize the prompt, source the oh-my-posh
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
@@ -30,31 +31,4 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 fi
 
 eval "$(oh-my-posh init zsh)"
-
-# Keybindings
-bindkey '^y' autosuggest-accept # (neovim accept)
-
-# History
-HISTFILE="$HOME/.zsh_history"
-HISTSIZE=5000
-SAVEHIST=$HISTSIZE
-HISTDUP=erase
-
-setopt appendhistory
-setopt sharehistory
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
-
-# Completion styling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-
-# Aliases
-alias ls='ls --color'
-
-# Shell integrations
 eval "$(fzf --zsh)"
