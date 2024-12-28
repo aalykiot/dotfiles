@@ -19,11 +19,14 @@ return {
                 local opts = { buffer = event.buf }
                 vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
                 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
-                vim.keymap.set('n', '<leader>rfr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
+                vim.keymap.set('n', '<leader>rf', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
                 vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
                 vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
             end,
         })
+
+        -- Disbale inline diagbnostic messages
+        vim.diagnostic.config({ virtual_text = false })
 
         -- Change diagnostics symbols
         local signs = { Error = ' ', Warn = ' ', Hint = '󰠠 ', Info = ' ' }
