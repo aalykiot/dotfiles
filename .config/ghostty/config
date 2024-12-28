@@ -7,5 +7,5 @@ shell-integration-features = no-cursor,no-sudo,title
 shell-integration = zsh
 window-padding-x = 6
 window-padding-balance = true
-window-theme = light
+window-theme = dark
 window-colorspace = display-p3
