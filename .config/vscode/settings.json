@@ -8,24 +8,16 @@
   "editor.lineHeight": 1.6,
   "editor.fontLigatures": false,
   "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-  "editor.formatOnType": false,
   "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": false,
   "editor.inlayHints.enabled": "off",
   "editor.inlineSuggest.enabled": true,
   "editor.accessibilitySupport": "off",
-  "prettier.singleQuote": true,
-  "prettier.tabWidth": 2,
-  "prettier.trailingComma": "none",
-  "explorer.openEditors.visible": 1,
   "terminal.integrated.fontSize": 14,
   "debug.allowBreakpointsEverywhere": true,
   "editor.wordWrap": "off",
-  "redhat.telemetry.enabled": true,
   "window.commandCenter": true,
-  "svelte.enable-ts-plugin": true,
-  "prisma.showPrismaDataPlatformNotification": false,
-  "editor.formatOnPaste": true,
-  "go.toolsManagement.autoUpdate": true,
   "breadcrumbs.enabled": false,
   "editor.stickyScroll.maxLineCount": 2,
   "editor.stickyScroll.enabled": false,
@@ -38,29 +30,5 @@
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.editor.limit.value": 1,
   "workbench.activityBar.location": "hidden",
-  "workbench.colorTheme": "Night Owl (No Italics)",
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "workbench.colorTheme": "Night Owl (No Italics)"
 }
