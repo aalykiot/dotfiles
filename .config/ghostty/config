@@ -9,3 +9,4 @@ window-padding-x = 6
 window-padding-balance = true
 window-theme = dark
 window-colorspace = display-p3
+# macos-titlebar-style = tabs
