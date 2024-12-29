@@ -35,3 +35,4 @@ $ stow .
 - [NeoVim](https://neovim.io/) - Hyperextensible Vim-based text editor.
 - [Visual Studio Code](https://code.visualstudio.com/) - Integrated development environment developed by Microsoft.
 - [LazyGit](https://github.com/jesseduffield/lazygit) - Simple terminal UI for git commands.
+- [Tmux](https://github.com/tmux/tmux/wiki) - A terminal multiplexer.
