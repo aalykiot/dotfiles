@@ -16,6 +16,18 @@ return {
             require('nvim-surround').setup()
         end,
     },
+    -- Transparent background
+    {
+        'xiyaowong/transparent.nvim',
+        config = function()
+            -- Configuration
+            require('transparent').setup({
+                exclude_groups = { 'StatusLine', 'StatusLineNC' },
+            })
+            -- Make bavkground transparent
+            vim.cmd(':TransparentEnable')
+        end,
+    },
     -- Notifications
     {
         'j-hui/fidget.nvim',
@@ -58,19 +70,6 @@ return {
             })
         end,
     },
-    -- LSP Breadcrumbs
-    {
-        'utilyre/barbecue.nvim',
-        version = '*',
-        enabled = false,
-        dependencies = {
-            'SmiteshP/nvim-navic',
-            'nvim-tree/nvim-web-devicons',
-        },
-        config = function()
-            require('barbecue').setup()
-        end,
-    },
     -- Closing buffers
     {
         'kazhala/close-buffers.nvim',
@@ -78,24 +77,5 @@ return {
             require('close_buffers').setup()
             vim.keymap.set('n', '<C-q>', '<cmd>BDelete! this<CR>', { desc = 'Close active buffer' })
         end,
-    },
-    -- Tmux navigation support
-    {
-        'christoomey/vim-tmux-navigator',
-        cmd = {
-            'TmuxNavigateLeft',
-            'TmuxNavigateDown',
-            'TmuxNavigateUp',
-            'TmuxNavigateRight',
-            'TmuxNavigatePrevious',
-            'TmuxNavigatorProcessList',
-        },
-        keys = {
-            { '<c-h>', '<cmd><C-U>TmuxNavigateLeft<cr>' },
-            { '<c-j>', '<cmd><C-U>TmuxNavigateDown<cr>' },
-            { '<c-k>', '<cmd><C-U>TmuxNavigateUp<cr>' },
-            { '<c-l>', '<cmd><C-U>TmuxNavigateRight<cr>' },
-            { '<c-\\>', '<cmd><C-U>TmuxNavigatePrevious<cr>' },
-        },
     },
 }

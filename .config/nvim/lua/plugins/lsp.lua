@@ -26,7 +26,7 @@ return {
         })
 
         -- Disbale inline diagbnostic messages
-        vim.diagnostic.config({ virtual_text = false })
+        -- vim.diagnostic.config({ virtual_text = false })
 
         -- Change diagnostics symbols
         local signs = { Error = ' ', Warn = ' ', Hint = '󰠠 ', Info = ' ' }

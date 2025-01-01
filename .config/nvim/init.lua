@@ -1,6 +1,3 @@
-require('options')
-require('keymaps')
-
 -- Install lazy.nvim plugin manager
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -12,20 +9,31 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
--- Keymap to open the lazy.nvim UI
-vim.keymap.set('n', '<leader>L', '<cmd>Lazy<CR>', { desc = 'Open lazy.nvim UI' })
+-- When this config is loaded from VSCode, just use the following keymaps
+if vim.g.vscode then
+    -- Use neovim through VSCode
+    require('vscode.keymaps')
+else
+    -- Load keymaps and options
+    require('options')
+    require('keymaps')
 
--- Install plugins
-require('lazy').setup({
-    require('plugins.neotree'),
-    require('plugins.colorscheme'),
-    require('plugins.telescope'),
-    require('plugins.treesitter'),
-    require('plugins.suggestions'),
-    require('plugins.lsp'),
-    require('plugins.format'),
-    require('plugins.lint'),
-    require('plugins.trouble'),
-    require('plugins.which-key'),
-    require('plugins.misc'),
-})
+    -- Ordinary Neovim
+    vim.keymap.set('n', '<leader>L', '<cmd>Lazy<CR>', { desc = 'Open lazy.nvim UI' })
+
+    -- Install plugins
+    require('lazy').setup({
+        require('plugins.neotree'),
+        require('plugins.colorscheme'),
+        require('plugins.telescope'),
+        require('plugins.treesitter'),
+        require('plugins.suggestions'),
+        require('plugins.lsp'),
+        require('plugins.format'),
+        require('plugins.lint'),
+        require('plugins.trouble'),
+        require('plugins.tmux'),
+        require('plugins.which-key'),
+        require('plugins.misc'),
+    })
+end
