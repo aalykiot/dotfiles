@@ -1,11 +1,11 @@
 theme = iterm2 Pastel Dark Background
-font-family = SF Mono
+font-family = NotoSansM Nerd Font
 font-style = medium
 font-style-italic = false
 font-size = 14
 font-feature = -calt
 cursor-style = block
-adjust-cell-height = 10%
+adjust-cell-height = 5%
 shell-integration-features = no-cursor,no-sudo,title
 shell-integration = zsh
 window-padding-x = 6

@@ -32,6 +32,5 @@
   "workbench.editor.limit.value": 1,
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
-  },
-  "workbench.activityBar.location": "hidden"
+  }
 }

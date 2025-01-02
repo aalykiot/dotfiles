@@ -42,6 +42,7 @@ return {
             'rust_analyzer',
             'gopls',
             'pyright',
+            'taplo',
         }
 
         -- Server settings for the LSP
