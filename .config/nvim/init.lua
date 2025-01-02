@@ -12,7 +12,7 @@ vim.opt.rtp:prepend(lazypath)
 -- When this config is loaded from VSCode, just use the following keymaps
 if vim.g.vscode then
     -- Use neovim through VSCode
-    require('vscode-ext.keymaps')
+    require('keymaps_vscode')
 else
     -- Load keymaps and options
     require('options')
@@ -23,8 +23,8 @@ else
 
     -- Install plugins
     require('lazy').setup({
+        require('themes.gruvbox'),
         require('plugins.neotree'),
-        require('plugins.colorscheme'),
         require('plugins.telescope'),
         require('plugins.treesitter'),
         require('plugins.suggestions'),

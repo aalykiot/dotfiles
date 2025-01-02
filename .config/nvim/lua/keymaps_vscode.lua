@@ -34,4 +34,6 @@ vim.keymap.set({ 'n', 'v' }, '<leader>ql', "<cmd>lua require('vscode').action('e
 vim.keymap.set({ 'n', 'v' }, '<leader>xx', "<cmd>lua require('vscode').action('workbench.actions.view.problems')<CR>")
 vim.keymap.set({ 'n', 'v' }, '<leader>sf', "<cmd>lua require('vscode').action('workbench.action.quickOpen')<CR>")
 vim.keymap.set({ 'n', 'v' }, '<leader>f', "<cmd>lua require('vscode').action('editor.action.formatDocument')<CR>")
-
+vim.keymap.set({ 'n', 'v' }, '<leader>e', "<cmd>lua require('vscode').action('workbench.action.toggleSidebarVisibility')<CR>")
+vim.keymap.set({ 'n', 'v' }, '<leader>wsv', "<cmd>lua require('vscode').action('workbench.action.splitEditorRight')<CR>")
+vim.keymap.set({ 'n', 'v' }, '<leader>wsh', "<cmd>lua require('vscode').action('workbench.action.splitEditorDown')<CR>")
