@@ -7,19 +7,17 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
         error('Error cloning lazy.nvim:\n' .. out)
     end
 end ---@diagnostic disable-next-line: undefined-field
-vim.opt.rtp:prepend(lazypath)
 
--- When this config is loaded from VSCode, just use the following keymaps
+vim.opt.rtp:prepend(lazypath)
+vim.keymap.set('n', '<leader>L', '<cmd>Lazy<CR>', { desc = 'Open lazy.nvim UI' })
+
 if vim.g.vscode then
-    -- Use neovim through VSCode
+    -- Use following keymaps when running in VSCode
     require('keymaps_vscode')
 else
-    -- Load keymaps and options
+    -- Load ordinary Neovim setup
     require('options')
     require('keymaps')
-
-    -- Ordinary Neovim
-    vim.keymap.set('n', '<leader>L', '<cmd>Lazy<CR>', { desc = 'Open lazy.nvim UI' })
 
     -- Install plugins
     require('lazy').setup({

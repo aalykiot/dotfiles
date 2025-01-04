@@ -5,11 +5,10 @@
   "editor.cursorStyle": "line",
   "editor.tabSize": 2,
   "editor.fontSize": 14,
-  "editor.lineHeight": 1.6,
+  "editor.lineHeight": 1.5,
   "editor.lineNumbers": "relative",
   "editor.fontLigatures": false,
-  // "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontFamily": "SF Mono",
+  "editor.fontFamily": "BlexMono Nerd Font Mono",
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
   "editor.formatOnPaste": false,
@@ -27,9 +26,6 @@
   "workbench.tree.enableStickyScroll": false,
   "editor.scrollbar.horizontal": "hidden",
   "workbench.editor.showTabs": "multiple",
-  "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.perEditorGroup": true,
-  "workbench.editor.limit.value": 1,
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
