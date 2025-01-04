@@ -6,9 +6,10 @@ vim.keymap.set('n', '<Space>', '', opts)
 vim.g.mapleader = ' '
 vim.g.maolocalleader = ' '
 
--- System clipboard
-vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y', opts)
-vim.keymap.set({ 'n', 'v' }, '<leader>p', '"+p', opts)
+-- Sync clipboard between OS and Neovim
+vim.schedule(function()
+    vim.opt.clipboard = 'unnamedplus'
+end)
 
 -- Indenting
 vim.keymap.set('v', '<', '<gv', opts)

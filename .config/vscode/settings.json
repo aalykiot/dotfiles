@@ -1,4 +1,7 @@
 {
+  //
+  // General
+  //
   "editor.minimap.enabled": false,
   "editor.suggestSelection": "first",
   "editor.detectIndentation": true,
@@ -26,8 +29,31 @@
   "workbench.tree.enableStickyScroll": false,
   "editor.scrollbar.horizontal": "hidden",
   "workbench.editor.showTabs": "multiple",
+  "workbench.activityBar.location": "hidden",
+  //
+  // Extentions
+  //
+  "gitlens.codeLens.enabled": false,
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "workbench.activityBar.location": "hidden"
+  //
+  // Formatting
+  //
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.startupEditor": "none"
 }
