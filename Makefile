@@ -1,5 +1,8 @@
-brew:
+install:
 	make oh-my-zsh
+	make brew
+
+brew:
 	brew bundle --file=.config/brewfile/Brewfile
 
 oh-my-zsh:
