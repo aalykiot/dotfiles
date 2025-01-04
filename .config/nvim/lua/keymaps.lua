@@ -23,6 +23,10 @@ vim.keymap.set('n', '<leader>wsv', '<C-w>v', { desc = 'Split window vertically' 
 vim.keymap.set('n', '<leader>wsh', '<C-w>s', { desc = 'Split window horizontally' })
 vim.keymap.set('n', '<leader>wse', '<C-w>=', { desc = 'Make splits equal size' })
 
+-- Buffers
+vim.keymap.set('n', '<Tab>', '<cmd>bnext<CR>', { desc = 'Go to next open buffer' })
+vim.keymap.set('n', '<S-Tab>', '<cmd>bprevious<CR>', { desc = 'Go to previous open buffer' })
+
 -- Hightlight when yanking
 vim.api.nvim_create_autocmd('TextYankPost', {
     desc = 'Highlight when yanking (copying) text',
