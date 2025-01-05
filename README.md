@@ -22,7 +22,7 @@ finally, symlink the config files to the right places:
 $ stow .
 ```
 
-> For VSCode we need to manually symlink the settings.json: `ln -s <TARGET> <LINK-NAME>`
+> For VS Code we need to manually symlink the config files: `ln -s <TARGET> <LINK-NAME>`
 
 ## Tools and Packages
 
