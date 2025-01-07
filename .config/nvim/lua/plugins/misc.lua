@@ -24,7 +24,7 @@ return {
             require('transparent').setup({
                 exclude_groups = { 'StatusLine', 'StatusLineNC' },
             })
-            -- Make bavkground transparent
+            -- Make background transparent
             vim.cmd(':TransparentEnable')
         end,
     },
@@ -32,7 +32,14 @@ return {
     {
         'j-hui/fidget.nvim',
         config = function()
-            require('fidget').setup()
+            require('fidget').setup({
+                notification = {
+                    -- Transparent background
+                    window = {
+                        winblend = 0,
+                    },
+                },
+            })
         end,
     },
     -- Git indications

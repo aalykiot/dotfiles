@@ -2,8 +2,8 @@
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostics
+vim.keymap.set('n', 'dK', vim.diagnostic.open_float, { desc = 'Show line diagnostics' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic quickfix list' })
-vim.keymap.set('n', '<leader>dK', vim.diagnostic.open_float, { desc = 'Show line diagnostics' })
 
 -- Increment/decrement numbers
 vim.keymap.set('n', '<leader>+', '<C-a>', { desc = 'Increment number' })
