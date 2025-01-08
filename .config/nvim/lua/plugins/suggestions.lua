@@ -36,6 +36,7 @@ return {
                     auto_open = false,
                 },
             },
+            ---@diagnostic disable-next-line: missing-fields
             formatting = {
                 fields = { 'kind', 'abbr', 'menu' },
                 format = function(entry, vim_item)
