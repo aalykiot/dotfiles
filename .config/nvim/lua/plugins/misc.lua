@@ -16,6 +16,16 @@ return {
             require('nvim-surround').setup()
         end,
     },
+    -- Better movements
+    {
+        'ggandor/leap.nvim',
+        dependencies = {
+            'tpope/vim-repeat',
+        },
+        config = function()
+            require('leap').create_default_mappings()
+        end,
+    },
     -- Transparent background
     {
         'xiyaowong/transparent.nvim',
@@ -81,7 +91,7 @@ return {
     {
         'kazhala/close-buffers.nvim',
         config = function()
-            require('close_buffers').setup()
+            require('close_buffers').setup({})
             vim.keymap.set('n', '<C-q>', '<cmd>BDelete! this<CR>', { desc = 'Close active buffer' })
         end,
     },
