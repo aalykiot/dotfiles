@@ -9,6 +9,7 @@ brew 'fzf'
 brew 'neovim'
 brew 'lazygit'
 brew 'stow'
+brew 'nvm'
 brew 'ripgrep'
 brew 'bat'
 
