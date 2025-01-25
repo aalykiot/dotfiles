@@ -56,7 +56,10 @@ return {
     {
         'lewis6991/gitsigns.nvim',
         config = function()
-            require('gitsigns').setup({
+            local gitsigns = require('gitsigns')
+            local toggle_blame = gitsigns.toggle_current_line_blame
+            -- Initialize the plugin.
+            gitsigns.setup({
                 signs = {
                     add = { text = '+' },
                     change = { text = '~' },
@@ -65,6 +68,8 @@ return {
                     changedelete = { text = '~' },
                 },
             })
+            -- Create the keymaps.
+            vim.keymap.set('n', '<leader>gb', toggle_blame, { desc = 'Toggle git blame' })
         end,
     },
     -- Crates.io support
