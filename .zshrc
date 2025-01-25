@@ -4,11 +4,18 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Bat theme.
+export BAT_THEME="base16"
+
 # Path to the NVM installation.
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Load NVM.
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # Load completions.
+
+# Expose the fuzzy tmux session luncher script.
+alias tmux-session="~/dotfiles/.config/tmux/tmux-session.sh"
+alias tm="~/dotfiles/.config/tmux/tmux-session.sh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
