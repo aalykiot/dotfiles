@@ -1,16 +1,17 @@
 [general]
 live_config_reload = true
+import = ["./themes/github_dark_high_contrast.toml"]
 
 [window]
 padding = { x = 5, y = 5 }
 dynamic_padding = true
 decorations_theme_variant = "Dark"
 resize_increments = true
-# opacity = 0.75
+# opacity = 0.95
 # blur = true
 
 [font]
-normal = { family = "BlexMono Nerd Font Mono", style = "Regular"}
+normal = { family = "BlexMono Nerd Font Mono", style = "Regular" }
 size = 14
 offset = { y = 2 }
 
@@ -19,4 +20,3 @@ save_to_clipboard = true
 
 [terminal]
 shell = "/bin/zsh"
-
