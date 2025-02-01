@@ -33,8 +33,9 @@ return {
                     },
                 },
                 file_ignore_patterns = {
-                    'node_modules',
-                    '.git/',
+                    '^./.git/',
+                    '^node_modules/',
+                    '^target/',
                 },
             },
             pickers = {
