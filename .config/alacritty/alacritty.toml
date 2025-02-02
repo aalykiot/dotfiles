@@ -1,13 +1,13 @@
 [general]
 live_config_reload = true
-import = ["./themes/github_dark_high_contrast.toml"]
+import = ["./themes/moonfly.toml"]
 
 [window]
 padding = { x = 5, y = 5 }
 dynamic_padding = true
 decorations_theme_variant = "Dark"
 resize_increments = true
-# opacity = 0.95
+# opacity = 0.85
 # blur = true
 
 [font]
