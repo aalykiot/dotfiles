@@ -27,7 +27,7 @@ else
         require('plugins.telescope'),
         require('plugins.treesitter'),
         require('plugins.suggestions'),
-        require('plugins.lualine'),
+        require('plugins.mini'),
         require('plugins.lsp'),
         require('plugins.format'),
         require('plugins.lint'),
