@@ -12,7 +12,7 @@ resize_increments = true
 [font]
 # MesloLGS Nerd Font Mono, BlexMono Nerd Font Mono
 normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
-offset = { y = 6 }
+offset = { y = 2 }
 size = 14
 
 [selection]
