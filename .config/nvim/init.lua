@@ -30,6 +30,7 @@ else
         require('plugins.mini'),
         require('plugins.lsp'),
         require('plugins.format'),
+        require('plugins.ai'),
         require('plugins.lint'),
         require('plugins.trouble'),
         require('plugins.tmux'),
