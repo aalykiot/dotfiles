@@ -24,8 +24,8 @@ else
     require('lazy').setup({
         require('themes.gruvbox'),
         require('plugins.neotree'),
-        require('plugins.telescope'),
         require('plugins.treesitter'),
+        require('plugins.snacks'),
         require('plugins.suggestions'),
         require('plugins.mini'),
         require('plugins.lsp'),

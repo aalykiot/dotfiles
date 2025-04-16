@@ -1,11 +1,5 @@
 ---@diagnostic disable: need-check-nil
 
-local pickers = require('telescope.pickers')
-local finders = require('telescope.finders')
-local conf = require('telescope.config').values
-local actions = require('telescope.actions')
-local action_state = require('telescope.actions.state')
-
 local M = {}
 
 function M.get_local_models()
@@ -30,24 +24,41 @@ function M.get_local_models()
     return models
 end
 
-function M.pick_model(models, on_select)
-    pickers
-        .new({}, {
-            prompt_title = 'Models',
-            finder = finders.new_table({
-                results = models,
-            }),
-            sorter = conf.generic_sorter({}),
-            attach_mappings = function(prompt_bufnr)
-                actions.select_default:replace(function()
-                    actions.close(prompt_bufnr)
-                    local selection = action_state.get_selected_entry()
-                    on_select(selection[1])
-                end)
-                return true
-            end,
+local function to_snacks_items(entries)
+    local items = {}
+    for i, item in pairs(entries) do
+        table.insert(items, {
+            idx = i,
+            name = item,
+            text = item,
         })
-        :find()
+    end
+    return items
+end
+
+function M.pick_model(models, on_selection)
+    -- Check if snacks is installed
+    local has_snacks, snacks = pcall(require, 'snacks.picker')
+    local layout = require('snacks.picker.config.layouts')
+    if not has_snacks then
+        return
+    end
+
+    -- Format item to picker show entry
+    local format = function(item)
+        return { { item.name, 'SnacksPickerLabel' } }
+    end
+
+    snacks.pick({
+        title = 'Models',
+        items = to_snacks_items(models),
+        layout = layout.select,
+        format = format,
+        confirm = function(picker, item)
+            on_selection(item.text)
+            picker:close()
+        end,
+    })
 end
 
 function M.save_curr_selection(model)
