@@ -4,6 +4,13 @@ return {
         -- Init 'snacks' plugin
         local snacks = require('snacks')
 
+        -- Replace `vim.ui.select` with the snacks picker
+        snacks.setup({
+            picker = {
+                ui_select = true,
+            },
+        })
+
         -- Keymaps
         vim.keymap.set('n', '<leader>sf', snacks.picker.files, { desc = 'Find files' })
         vim.keymap.set('n', '<leader>sh', snacks.picker.help, { desc = 'Search help pages' })

@@ -44,19 +44,14 @@ function M.pick_model(models, on_selection)
         return
     end
 
-    -- Format item to picker show entry
-    local format = function(item)
-        return { { item.name, 'SnacksPickerLabel' } }
-    end
-
     snacks.pick({
         title = 'Models',
         items = to_snacks_items(models),
         layout = layout.select,
-        format = format,
+        format = 'text',
         confirm = function(picker, item)
-            on_selection(item.text)
             picker:close()
+            on_selection(item.text)
         end,
     })
 end
