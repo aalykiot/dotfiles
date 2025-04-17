@@ -81,4 +81,14 @@ return {
             vim.keymap.set('n', '<C-q>', '<cmd>BDelete! this<CR>', { desc = 'Close active buffer' })
         end,
     },
+    -- Markdown preview
+    {
+        'iamcco/markdown-preview.nvim',
+        cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
+        ft = { 'markdown' },
+        build = 'cd app && npm install && git restore .',
+        init = function()
+            vim.g.mkdp_filetypes = { 'markdown' }
+        end,
+    },
 }
