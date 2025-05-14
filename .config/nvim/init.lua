@@ -10,31 +10,25 @@ end ---@diagnostic disable-next-line: undefined-field
 
 vim.opt.rtp:prepend(lazypath)
 
-if vim.g.vscode then
-    -- Use following keymaps when running in VSCode
-    require('keymaps_vscode')
-else
-    -- Load ordinary Neovim setup
-    require('options')
-    require('keymaps')
+-- Load ordinary Neovim setup
+require('options')
+require('keymaps')
 
-    vim.keymap.set('n', '<leader>L', '<cmd>Lazy<CR>', { desc = 'Open lazy.nvim UI' })
+vim.keymap.set('n', '<leader>L', '<cmd>Lazy<CR>', { desc = 'Open lazy.nvim UI' })
 
-    -- Install plugins
-    require('lazy').setup({
-        require('themes.gruvbox'),
-        require('plugins.neotree'),
-        require('plugins.treesitter'),
-        require('plugins.snacks'),
-        require('plugins.suggestions'),
-        require('plugins.mini'),
-        require('plugins.lsp'),
-        require('plugins.format'),
-        require('plugins.ai'),
-        require('plugins.lint'),
-        require('plugins.trouble'),
-        require('plugins.tmux'),
-        require('plugins.which-key'),
-        require('plugins.misc'),
-    })
-end
+-- Install plugins
+require('lazy').setup({
+    require('themes.gruvbox'),
+    require('plugins.neotree'),
+    require('plugins.treesitter'),
+    require('plugins.snacks'),
+    require('plugins.suggestions'),
+    require('plugins.mini'),
+    require('plugins.lsp'),
+    require('plugins.format'),
+    require('plugins.lint'),
+    require('plugins.trouble'),
+    require('plugins.tmux'),
+    require('plugins.which-key'),
+    require('plugins.misc'),
+})
