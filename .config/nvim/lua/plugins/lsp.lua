@@ -19,7 +19,7 @@ return {
         },
     },
     config = function()
-        -- Add cmp cababilities to lsp_config
+        -- Add cmp capabilities to lsp_config
         local lspconfig_defaults = require('lspconfig').util.default_config
         lspconfig_defaults.capabilities = vim.tbl_deep_extend('force', lspconfig_defaults.capabilities, require('cmp_nvim_lsp').default_capabilities())
 
@@ -40,7 +40,7 @@ return {
             end,
         })
 
-        -- Disbale inline diagnostic messages
+        -- Disable inline diagnostic messages
         -- vim.diagnostic.config({ virtual_text = false })
 
         -- Change diagnostics symbols
