@@ -8,7 +8,6 @@ dynamic_padding = true
 decorations_theme_variant = "Dark"
 resize_increments = true
 
-
 [font]
 # MesloLGS Nerd Font Mono, BlexMono Nerd Font Mono
 normal = { family = "FiraCode Nerd Font Mono", style = "Regular" }

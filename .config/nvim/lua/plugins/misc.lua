@@ -40,15 +40,7 @@ return {
             local gitsigns = require('gitsigns')
             local toggle_blame = gitsigns.toggle_current_line_blame
             -- Initialize the plugin.
-            gitsigns.setup({
-                signs = {
-                    add = { text = '+' },
-                    change = { text = '~' },
-                    delete = { text = '_' },
-                    topdelete = { text = '‾' },
-                    changedelete = { text = '~' },
-                },
-            })
+            gitsigns.setup()
             -- Create the keymaps.
             vim.keymap.set('n', '<leader>gb', toggle_blame, { desc = 'Toggle git blame' })
         end,
