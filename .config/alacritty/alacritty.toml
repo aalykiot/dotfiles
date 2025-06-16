@@ -7,12 +7,13 @@ padding = { x = 5, y = 5 }
 dynamic_padding = true
 decorations_theme_variant = "Dark"
 resize_increments = true
+decorations = "Buttonless"
 opacity = 0.92
 
 [font]
 # MesloLGS Nerd Font Mono, BlexMono Nerd Font Mono
 normal = { family = "FiraCode Nerd Font Mono", style = "Regular" }
-offset = { y = 3 }
+offset = { y = 4 }
 size = 14
 
 [selection]
