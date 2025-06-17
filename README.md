@@ -31,9 +31,8 @@ $ stow .
 - [Zsh](https://www.zsh.org/) - An extended version of Bash with new features.
 - [Oh My Zsh](https://ohmyz.sh/) - A framework for managing ZSH configurations.
 - [Nerd Fonts](https://www.nerdfonts.com/) - Developer fonts with a high number of glyphs (icons).
-- [Alacritty](https://alacritty.org/) - A cross-platform, OpenGL terminal emulator.
+- [Ghostty](https://ghostty.org/) - A fast, feature-rich, and cross-platform terminal emulator.
 - [NeoVim](https://neovim.io/) - Hyperextensible Vim-based text editor.
 - [Visual Studio Code](https://code.visualstudio.com/) - Integrated development environment developed by Microsoft.
 - [LazyGit](https://github.com/jesseduffield/lazygit) - Simple terminal UI for git commands.
 - [Tmux](https://github.com/tmux/tmux/wiki) - A terminal multiplexer.
-- [Ollama](https://ollama.com/) - A platform for running LLMs on your local machine.

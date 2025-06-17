@@ -1,0 +1,22 @@
+theme = ayu
+cursor-style = block
+cursor-color = #999999
+
+window-padding-x = 6
+window-padding-balance = true
+window-theme = dark
+window-colorspace = display-p3
+
+background-opacity = 0.92
+background-blur = false
+
+shell-integration-features = no-cursor,no-sudo,title
+shell-integration = zsh
+
+font-family = MesloLGL Nerd Font Mono
+font-style = Regular
+font-style-italic = false
+font-size = 13
+font-feature = -calt
+
+macos-titlebar-style = tabs
