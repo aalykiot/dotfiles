@@ -1,6 +1,7 @@
 theme = ayu
 cursor-style = block
 cursor-color = #999999
+cursor-style-blink = false
 
 window-padding-x = 6
 window-padding-balance = true
