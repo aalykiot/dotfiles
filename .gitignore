@@ -1,8 +1,10 @@
-# Track only zed setup files
-.config/zed/*
-.config/gcloud/*
-!.config/zed/settings.json
-!.config/zed/keymap.json
+# Ignore everything in zed/
+zed/*
 
-# Tmux
-.config/tmux/plugins/*
+# Except these files
+!zed/
+!zed/settings.json
+!zed/keymap.json
+
+# Tmux plugins
+tmux/plugins/*

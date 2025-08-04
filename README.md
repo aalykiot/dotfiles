@@ -10,16 +10,10 @@ First, clone the repo in your `$HOME` directory:
 $ git clone git@github.com/aalykiot/dotfiles
 ```
 
-then, use `make` to install the required packages:
+then, run the installation script to install the required packages:
 
 ```sh
-$ cd dotfiles/ && make install
-```
-
-finally, symlink the config files to the right places:
-
-```sh
-$ stow .
+$ cd dotfiles/ && ./install.sh
 ```
 
 > For VS Code we need to manually symlink the config files: `ln -s <TARGET> <LINK-NAME>`
