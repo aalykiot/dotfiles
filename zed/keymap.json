@@ -21,6 +21,8 @@
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePreviousItem",
       "space p": "editor::Paste",
       "space g b": "git::Blame",
       "space space": "tab_switcher::Toggle",
