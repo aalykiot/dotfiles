@@ -14,7 +14,7 @@
   "vim_mode": true,
   "vertical_scroll_margin": 10,
   "ui_font_size": 14,
-  "buffer_font_size": 13.5,
+  "buffer_font_size": 14,
   "buffer_font_weight": 400,
   "buffer_font_family": "BlexMono Nerd Font Mono",
   "relative_line_numbers": true,
@@ -27,7 +27,7 @@
     "line_height": "standard"
   },
   "tab_bar": {
-    "show": true,
+    "show": false,
     "show_nav_history_buttons": false
   },
   "toolbar": {
