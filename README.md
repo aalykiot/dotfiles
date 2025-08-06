@@ -27,6 +27,6 @@ $ cd dotfiles/ && ./install.sh
 - [Nerd Fonts](https://www.nerdfonts.com/) - Developer fonts with a high number of glyphs (icons).
 - [Ghostty](https://ghostty.org/) - A fast, feature-rich, and cross-platform terminal emulator.
 - [NeoVim](https://neovim.io/) - Hyperextensible Vim-based text editor.
-- [Visual Studio Code](https://code.visualstudio.com/) - Integrated development environment developed by Microsoft.
+- [Zed](https://zed.dev/) - Zed is a next-generation code editor designed for high-performance.
 - [LazyGit](https://github.com/jesseduffield/lazygit) - Simple terminal UI for git commands.
 - [Tmux](https://github.com/tmux/tmux/wiki) - A terminal multiplexer.

@@ -9,7 +9,7 @@
   {
     "bindings": {
       "ctrl-j": "menu::SelectNext",
-      "ctrl-k": "menu::SelectPrev"
+      "ctrl-k": "menu::SelectPrevious"
     }
   },
   {
@@ -22,18 +22,18 @@
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       "space p": "editor::Paste",
-      "space b": "editor::ToggleGitBlame",
+      "space g b": "git::Blame",
       "space space": "tab_switcher::Toggle",
-      "space s p": "pane::DeploySearch",
-      "space s h": "pane::SplitDown",
-      "space s v": "pane::SplitRight",
+      "space s g": "pane::DeploySearch",
+      "space w s h": "pane::SplitDown",
+      "space w s v": "pane::SplitRight",
       "space x x": "diagnostics::Deploy",
       "space s f": "file_finder::Toggle",
       "space t": "workspace::NewCenterTerminal",
       "space e": "workspace::ToggleLeftDock",
       "space f": "editor::Format",
       "n": "search::SelectNextMatch",
-      "shift-n": "search::SelectPrevMatch",
+      "shift-n": "search::SelectPreviousMatch",
       "shift-k": "editor::Hover",
       "ctrl-q": "pane::CloseActiveItem"
     }
@@ -42,7 +42,7 @@
     "context": "vim_mode == insert",
     "bindings": {
       "ctrl-j": "editor::ContextMenuNext",
-      "ctrl-k": "editor::ContextMenuPrev"
+      "ctrl-k": "editor::ContextMenuPrevious"
     }
   },
   {
@@ -54,22 +54,10 @@
   {
     "context": "Dock || Terminal || Editor || ProjectPanel",
     "bindings": {
-      "ctrl-shift-h": [
-        "workspace::ActivatePaneInDirection",
-        "Left"
-      ],
-      "ctrl-shift-j": [
-        "workspace::ActivatePaneInDirection",
-        "Down"
-      ],
-      "ctrl-shift-k": [
-        "workspace::ActivatePaneInDirection",
-        "Up"
-      ],
-      "ctrl-shift-l": [
-        "workspace::ActivatePaneInDirection",
-        "Right"
-      ]
+      "ctrl-shift-k": "workspace::ActivatePaneUp",
+      "ctrl-shift-j": "workspace::ActivatePaneDown",
+      "ctrl-shift-h": "workspace::ActivatePaneLeft",
+      "ctrl-shift-l": "workspace::ActivatePaneRight"
     }
   }
 ]
