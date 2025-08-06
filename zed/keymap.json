@@ -29,6 +29,9 @@
       "space w s v": "pane::SplitRight",
       "space x x": "diagnostics::Deploy",
       "space s f": "file_finder::Toggle",
+      "space s s": "project_symbols::Toggle",
+      "space r n": "editor::Rename",
+      "space c a": "editor::ToggleCodeActions",
       "space t": "workspace::NewCenterTerminal",
       "space e": "workspace::ToggleLeftDock",
       "space f": "editor::Format",
@@ -49,6 +52,12 @@
     "context": "Terminal",
     "bindings": {
       "cmd-t": "workspace::NewTerminal"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock"
     }
   },
   {
