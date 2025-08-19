@@ -22,6 +22,7 @@ return {
     -- Notifications
     {
         'j-hui/fidget.nvim',
+        version = 'v1.6.1', -- Fixes the transparency issue
         config = function()
             require('fidget').setup({
                 notification = {
