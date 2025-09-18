@@ -84,4 +84,11 @@ return {
             vim.g.mkdp_filetypes = { 'markdown' }
         end,
     },
+    -- Auto-close HTML tags
+    {
+        'windwp/nvim-ts-autotag',
+        config = function()
+            require('nvim-ts-autotag').setup()
+        end,
+    },
 }
