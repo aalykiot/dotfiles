@@ -18,6 +18,7 @@ return {
                 css = { 'prettier' },
                 json = { 'prettier' },
                 python = { 'isort', 'black' },
+                yaml = { 'prettier' },
             },
         })
 
