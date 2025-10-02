@@ -11,7 +11,7 @@
   "editor.lineHeight": 1.5,
   "editor.lineNumbers": "relative",
   "editor.fontLigatures": false,
-  "editor.fontFamily": "BlexMono Nerd Font Mono",
+  "editor.fontFamily": "MesloLGL Nerd Font Mono",
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
   "editor.formatOnPaste": false,
@@ -29,14 +29,10 @@
   "workbench.tree.enableStickyScroll": false,
   "editor.scrollbar.horizontal": "hidden",
   "workbench.editor.showTabs": "multiple",
-  "workbench.activityBar.location": "hidden",
   //
   // Extentions
   //
   "gitlens.codeLens.enabled": false,
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
   //
   // Formatting
   //
@@ -55,5 +51,7 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "vim.useSystemClipboard": true
+  "vim.useSystemClipboard": true,
+  "workbench.activityBar.location": "hidden",
+  "workbench.colorTheme": "Monochrome (GitHub Edition)"
 }
