@@ -4,6 +4,7 @@ cursor-color = #999999
 cursor-style-blink = false
 
 window-padding-x = 6
+window-padding-y = 0,2
 window-padding-balance = true
 window-theme = dark
 window-colorspace = display-p3

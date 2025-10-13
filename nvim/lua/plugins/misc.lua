@@ -91,4 +91,38 @@ return {
             require('nvim-ts-autotag').setup()
         end,
     },
+    -- VS Code like winbar breadcrumbs
+    {
+        'utilyre/barbecue.nvim',
+        name = 'barbecue',
+        version = '*',
+        dependencies = {
+            'SmiteshP/nvim-navic',
+            'nvim-tree/nvim-web-devicons',
+        },
+        config = function()
+            require('barbecue').setup({
+                create_autocmd = false,
+            })
+            -- Update barbecue on custom events for better performance
+            vim.api.nvim_create_autocmd({
+                'WinResized',
+                'BufWinEnter',
+                'CursorHold',
+                'InsertLeave',
+            }, {
+                group = vim.api.nvim_create_augroup('barbecue.updater', {}),
+                callback = function()
+                    require('barbecue.ui').update()
+                end,
+            })
+            -- Make the breadcrumbs (background) transparent
+            vim.api.nvim_create_autocmd({ 'VimEnter', 'WinEnter', 'BufWinEnter' }, {
+                callback = function()
+                    vim.api.nvim_set_hl(0, 'WinBar', { bg = 'NONE' })
+                    vim.api.nvim_set_hl(0, 'WinBarNC', { bg = 'NONE' })
+                end,
+            })
+        end,
+    },
 }

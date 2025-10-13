@@ -33,7 +33,7 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 
 -- Time
-vim.opt.updatetime = 250
+vim.opt.updatetime = 200
 vim.opt.timeoutlen = 300
 
 -- Splits
