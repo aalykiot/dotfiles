@@ -55,8 +55,6 @@ return {
             'lua_ls',
             'ts_ls',
             'rust_analyzer',
-            'gopls',
-            'pyright',
         }
 
         -- Setup mason
@@ -76,7 +74,6 @@ return {
         require('mason-tool-installer').setup({
             ensure_installed = {
                 'eslint_d',
-                'pylint',
             },
         })
 
