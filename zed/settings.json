@@ -16,7 +16,7 @@
   "ui_font_size": 13.5,
   "buffer_font_size": 13.5,
   "buffer_font_weight": 400,
-  "buffer_font_family": "MesloLGL Nerd Font Mono",
+  "buffer_font_family": "BlexMono Nerd Font Mono",
   "relative_line_numbers": true,
   "show_completion_documentation": false,
   "buffer_font_features": {
@@ -46,7 +46,7 @@
       "enabled": false
     }
   },
-  "theme": "Gruvbox Dark Hard",
+  "theme": "Gruvbox Dark",
   "experimental.theme_overrides": {
     "syntax": {
       "comment": {
