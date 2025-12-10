@@ -13,13 +13,20 @@ confirm-close-surface = false
 background-opacity = 0.92
 background-blur = false
 
+macos-titlebar-style = tabs
+
 shell-integration-features = no-cursor,no-sudo,title
 shell-integration = zsh
 
-font-family = MesloLGL Nerd Font Mono
-font-style = Regular
-font-style-italic = false
 font-size = 13
+font-style-italic = false
 font-feature = -calt
 
-macos-titlebar-style = tabs
+# font-family = MesloLGL Nerd Font Mono
+# font-style = Regular
+
+font-family = JetBrainsMono Nerd Font Mono
+font-style = Medium
+adjust-cell-height = 10%
+
+
