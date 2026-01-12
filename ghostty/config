@@ -6,14 +6,8 @@ cursor-style-blink = false
 window-padding-x = 6
 window-padding-y = 0,2
 window-padding-balance = true
-window-theme = dark
 window-colorspace = display-p3
 confirm-close-surface = false
-
-background-opacity = 0.92
-background-blur = false
-
-macos-titlebar-style = tabs
 
 shell-integration-features = no-cursor,no-sudo,title
 shell-integration = zsh
@@ -29,4 +23,13 @@ font-family = JetBrainsMono Nerd Font Mono
 font-style = Medium
 adjust-cell-height = 10%
 
+# Theme 1
+window-theme = light
+macos-titlebar-style = native
+
+# Theme 2
+# window-theme = dark
+# background-opacity = 0.92
+# background-blur = false
+# macos-titlebar-style = tabs
 
