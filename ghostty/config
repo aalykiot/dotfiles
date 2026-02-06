@@ -31,7 +31,7 @@ theme = Cursor Dark
 window-theme = dark
 macos-titlebar-style = native
 
-# theme = Cursor Dark
+# theme = Ayu
 # window-theme = dark
 # background-opacity = 0.92
 # background-blur = false
