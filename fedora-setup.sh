@@ -24,16 +24,15 @@ curl -f https://zed.dev/install.sh | sh
 curl -fsS https://dl.brave.com/install.sh | sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain stable -y
 
-# Setup zsh and oh-my-zsh as the default shell.
-chsh -s $(which zsh)
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
-echo "source /usr/share/zsh-autosuggestions/zsh-autosuggestions.sh" >> ~/.zshrc
-
 # Symlink personal dotfiles.
 ln -s "$HOME/dotfiles/nvim" "$HOME/.config/nvim"
 ln -s "$HOME/dotfiles/tmux" "$HOME/.config/tmux"
 ln -s "$HOME/dotfiles/.zshrc.custom" "$HOME/.zshrc.custom"
+
+# We need to create the following folders for the symlink to work.
+mkdir "$HOME/.config/zed"
+mkdir "$HOME/.config/ghostty"
+
 ln -sf "$HOME/dotfiles/zed/settings.json" "$HOME/.config/zed/settings.json"
 ln -sf "$HOME/dotfiles/zed/keymap.json" "$HOME/.config/zed/keymap.json"
 cp -f "$HOME/dotfiles/ghostty/config" "$HOME/.config/ghostty/"
@@ -41,6 +40,11 @@ cp -f "$HOME/dotfiles/ghostty/config" "$HOME/.config/ghostty/"
 # Clone tmux plugin manager.
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# Source the custom .zshrc.
+# Setup zsh and oh-my-zsh as the default shell.
+chsh -s $(which zsh)
+
+echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+echo "source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
 echo "source $HOME/.zshrc.custom" >> ~/.zshrc
-echo "Done! ✨"
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
