@@ -8,3 +8,6 @@ zed/*
 
 # Tmux plugins
 tmux/plugins/*
+
+# Neovim
+nvim/lazy-lock.json
