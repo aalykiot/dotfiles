@@ -1,0 +1,8 @@
+# Bat theme.
+export BAT_THEME="base16"
+
+# Expose the fuzzy tmux session luncher script.
+alias tmux-session="$HOME/.config/tmux/tmux-session.sh"
+alias tmux-git-clone="$HOME/.config/tmux/tmux-git-clone.sh"
+alias session="$HOME/.config/tmux/tmux-session.sh"
+
