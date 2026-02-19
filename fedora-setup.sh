@@ -8,7 +8,7 @@ sudo dnf -y install neovim
 sudo dnf -y install tmux
 sudo dnf -y install fzf
 sudo dnf -y install bat
-sudo dnf -y install btop
+sudo dnf -y install htop
 sudo dnf -y install nodejs
 sudo dnf -y install golang
 sudo dnf -y install zsh-autosuggestions
