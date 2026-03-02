@@ -7,13 +7,11 @@ return {
         -- Fine tune the theme
         require('rose-pine').setup({
             variant = 'moon',
+            dark_variant = 'moon',
             styles = {
                 bold = false,
                 italic = false,
-                transparency = false,
             },
         })
-        -- Enable theme
-        vim.cmd.colorscheme('rose-pine')
     end,
 }

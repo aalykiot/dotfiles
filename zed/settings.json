@@ -9,7 +9,7 @@
 {
   "telemetry": {
     "metrics": false,
-    "diagnostics": false
+    "diagnostics": false,
   },
   "vim_mode": true,
   "vertical_scroll_margin": 10,
@@ -20,44 +20,44 @@
   "relative_line_numbers": "enabled",
   "show_completion_documentation": false,
   "buffer_font_features": {
-    "calt": false
+    "calt": false,
   },
   "format_on_save": "off",
   "terminal": {
-    "line_height": "standard"
+    "line_height": "standard",
   },
   "tab_bar": {
     "show": false,
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
   },
   "toolbar": {
     "breadcrumbs": true,
     "quick_actions": false,
-    "selections_menu": false
+    "selections_menu": false,
   },
   "project_panel": {
-    "indent_size": 15
+    "indent_size": 15,
   },
   "vim": {
-    "use_system_clipboard": "always"
+    "use_system_clipboard": "always",
   },
   "git": {
     "inline_blame": {
-      "enabled": false
-    }
+      "enabled": false,
+    },
   },
   "theme": "One Dark",
   "experimental.theme_overrides": {
     "syntax": {
       "comment": {
-        "font_style": "normal"
+        "font_style": "normal",
       },
       "comment.doc": {
-        "font_style": "normal"
+        "font_style": "normal",
       },
       "variable.special": {
-        "font_style": "normal"
-      }
-    }
-  }
+        "font_style": "normal",
+      },
+    },
+  },
 }

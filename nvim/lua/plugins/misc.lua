@@ -13,7 +13,19 @@ return {
         config = function()
             -- Configuration
             require('transparent').setup({
-                exclude_groups = { 'StatusLine', 'StatusLineNC' },
+                extra_groups = {
+                    'NeoTreeNormal',
+                    'NeoTreeNormalNC',
+                    'NeoTreeCursorLine',
+                    'NeoTreeEndOfBuffer',
+                    'WinBar',
+                    'WinBarNC',
+                },
+                exclude_groups = {
+                    'StatusLine',
+                    'StatusLineNC',
+                    'FloatNormal',
+                },
             })
             -- Make background transparent
             vim.cmd(':TransparentEnable')
@@ -114,13 +126,6 @@ return {
                 group = vim.api.nvim_create_augroup('barbecue.updater', {}),
                 callback = function()
                     require('barbecue.ui').update()
-                end,
-            })
-            -- Make the breadcrumbs (background) transparent
-            vim.api.nvim_create_autocmd({ 'VimEnter', 'WinEnter', 'BufWinEnter' }, {
-                callback = function()
-                    vim.api.nvim_set_hl(0, 'WinBar', { bg = 'NONE' })
-                    vim.api.nvim_set_hl(0, 'WinBarNC', { bg = 'NONE' })
                 end,
             })
         end,
