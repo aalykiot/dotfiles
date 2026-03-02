@@ -2,7 +2,7 @@
 
 These are the dotfiles that configure the tools I use in my system, and some installation scripts that automatically install all the following packages. I constantly try to improve my development workflow.
 
-### Setup
+### Setup (fedora)
 
 First, clone the repo in your `$HOME` directory:
 
@@ -13,7 +13,7 @@ $ git clone git@github.com/aalykiot/dotfiles
 then, run the installation script to install the required packages:
 
 ```sh
-$ cd dotfiles/ && ./install.sh
+$ cd dotfiles/ && ./fedora-setup.sh
 ```
 
 > For VS Code we need to manually symlink the config files: `ln -s <TARGET> <LINK-NAME>`

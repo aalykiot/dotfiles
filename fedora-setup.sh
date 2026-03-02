@@ -14,6 +14,7 @@ sudo dnf -y install golang
 sudo dnf -y install zsh-autosuggestions
 sudo dnf -y install zsh-syntax-highlighting
 sudo dnf -y install google-chrome-stable
+sudo dnf -y install gnome-tweaks
 
 # Enable the copr for ghostty.
 sudo dnf -y copr enable scottames/ghostty
