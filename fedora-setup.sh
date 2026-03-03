@@ -15,6 +15,7 @@ sudo dnf -y install zsh-autosuggestions
 sudo dnf -y install zsh-syntax-highlighting
 sudo dnf -y install google-chrome-stable
 sudo dnf -y install gnome-tweaks
+sudo dnf -y install unzip
 
 # Enable the copr for ghostty.
 sudo dnf -y copr enable scottames/ghostty
