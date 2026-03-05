@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Update the system and install core applications.
-sudo dnf -y update && sudo dnf -y upgrade
+sudo dnf -y update
 sudo dnf -y install zsh
 sudo dnf -y install wget
 sudo dnf -y install neovim

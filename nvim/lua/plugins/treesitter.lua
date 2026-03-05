@@ -1,9 +1,11 @@
 return {
     'nvim-treesitter/nvim-treesitter',
+    branch = 'master',
+    lazy = false,
     build = ':TSUpdate',
     config = function()
         ---@diagnostic disable-next-line: missing-fields
-        require('nvim-treesitter.config').setup({
+        require('nvim-treesitter.configs').setup({
             ensure_installed = {
                 'bash',
                 'lua',
