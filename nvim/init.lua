@@ -19,6 +19,7 @@ vim.keymap.set('n', '<leader>L', '<cmd>Lazy<CR>', { desc = 'Open lazy.nvim UI' }
 require('lazy').setup({
     require('themes.gruvbox'),
     require('themes.rose-pine'),
+    require('themes.vscode'),
     require('plugins.neotree'),
     require('plugins.treesitter'),
     require('plugins.snacks'),
