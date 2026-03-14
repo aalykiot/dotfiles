@@ -49,3 +49,4 @@ vim.opt.inccommand = 'split'
 -- Lines and cursrors
 vim.opt.cursorline = false
 vim.opt.scrolloff = 10
+-- vim.opt.guicursor = 'n-v-i-c:block-Cursor'
