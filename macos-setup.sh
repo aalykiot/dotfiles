@@ -14,6 +14,7 @@ brew install btop
 brew install bat
 brew install tmux
 brew install go
+brew install n
 brew install --cask raycast
 brew install --cask nikitabobko/tap/aerospace
 brew install --cask zed
