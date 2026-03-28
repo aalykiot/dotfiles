@@ -27,7 +27,7 @@ font-size = 14
 
 # ======= THEMES =======
 
-theme = Cursor Dark
+theme = Ayu
 window-theme = dark
 macos-titlebar-style = native
 
@@ -35,5 +35,4 @@ macos-titlebar-style = native
 # window-theme = dark
 # background-opacity = 0.92
 # background-blur = false
-# macos-titlebar-style = tabs
-
+# window-decoration = none

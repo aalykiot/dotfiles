@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": {
+    "mode": "light",
+    "light": "Bearded Icon Theme",
+    "dark": "Bearded Icon Theme"
+  },
   "telemetry": {
     "metrics": false,
     "diagnostics": false,
@@ -46,7 +51,11 @@
       "enabled": false,
     },
   },
-  "theme": "One Dark",
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "GitHub Dark Default"
+  },
   "experimental.theme_overrides": {
     "syntax": {
       "comment": {
