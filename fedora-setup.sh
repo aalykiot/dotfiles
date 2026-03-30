@@ -21,8 +21,12 @@ sudo dnf -y install unzip
 sudo dnf -y copr enable scottames/ghostty
 sudo dnf -y install ghostty
 
+# Enable microsoft packages and install vscode.
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo
+sudo dnf check-update && sudo dnf install code
+
 # Custom install scripts.
-curl -f https://zed.dev/install.sh | sh
 curl -fsS https://dl.brave.com/install.sh | sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain stable -y
 
@@ -32,21 +36,20 @@ ln -s "$HOME/dotfiles/tmux" "$HOME/.config/tmux"
 ln -s "$HOME/dotfiles/.zshrc.custom" "$HOME/.zshrc.custom"
 
 # We need to create the following folders for the symlink to work.
-mkdir "$HOME/.config/zed"
-mkdir "$HOME/.config/ghostty"
+mkdir -p "$HOME/.config/zed"
+mkdir -p "$HOME/.config/ghostty"
+mkdir -p "$HOME/.config/Code/User"
 
-ln -sf "$HOME/dotfiles/zed/settings.json" "$HOME/.config/zed/settings.json"
-ln -sf "$HOME/dotfiles/zed/keymap.json" "$HOME/.config/zed/keymap.json"
 cp -f "$HOME/dotfiles/ghostty/config" "$HOME/.config/ghostty/"
+cp -f "$HOME/dotfiles/vscode/settings.json" "$HOME/.config/Code/User/"
+cp -f "$HOME/dotfiles/vscode/keybindings.json" "$HOME/.config/Code/User/"
 
 # Clone tmux plugin manager.
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# Setup zsh and oh-my-zsh as the default shell.
-chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 echo "source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
 echo "source $HOME/.zshrc.custom" >> ~/.zshrc
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

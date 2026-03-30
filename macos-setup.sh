@@ -22,6 +22,7 @@ brew install --cask brave-browser
 brew install --cask ghostty
 brew install --cask font-meslo-lg-nerd-font
 brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask visual-studio-code
 
 # Custom install scripts.
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain stable -y
@@ -33,19 +34,17 @@ ln -s "$HOME/dotfiles/.zshrc.custom" "$HOME/.zshrc.custom"
 ln -s "$HOME/dotfiles/.aerospace.toml" "$HOME/.aerospace.toml"
 
 # We need to create the following folders for the symlink to work.
-mkdir "$HOME/.config/zed"
-mkdir "$HOME/.config/ghostty"
+mkdir -p "$HOME/.config/ghostty"
+mkdir -p "$HOME/Library/Application\ Support/Code/User"
 
-ln -sf "$HOME/dotfiles/zed/settings.json" "$HOME/.config/zed/settings.json"
-ln -sf "$HOME/dotfiles/zed/keymap.json" "$HOME/.config/zed/keymap.json"
 cp -f "$HOME/dotfiles/ghostty/config" "$HOME/.config/ghostty/"
+cp -f "$HOME/dotfiles/vscode/settings.json" "$HOME/Library/Application\ Support/Code/User/"
+cp -f "$HOME/dotfiles/vscode/keybindings.json" "$HOME/Library/Application\ Support/Code/User/"
 
 # Clone tmux plugin manager.
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Setup zsh and oh-my-zsh as the default shell.
-chsh -s $(which zsh)
-
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc

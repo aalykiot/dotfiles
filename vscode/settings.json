@@ -11,7 +11,7 @@
   "editor.lineHeight": 1.5,
   "editor.lineNumbers": "relative",
   "editor.fontLigatures": false,
-  "editor.fontFamily": "MesloLGL Nerd Font Mono",
+  "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
   "editor.formatOnPaste": false,
@@ -53,5 +53,5 @@
   },
   "vim.useSystemClipboard": true,
   "workbench.activityBar.location": "hidden",
-  "workbench.colorTheme": "Monochrome (GitHub Edition)"
+  "workbench.colorTheme": "Dark Modern"
 }

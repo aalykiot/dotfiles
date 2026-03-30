@@ -167,6 +167,6 @@ snap-assist-sync-layout=false
 snap-assistant-animation-time=uint32 120
 snap-assistant-threshold=20
 span-window-all-tiles=['<Super>f']
-window-border-color='rgb(153,193,241)'
+window-border-color='rgb(47,201,218)'
 window-border-width=uint32 2
 window-use-custom-border-color=true

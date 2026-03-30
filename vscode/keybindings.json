@@ -1,29 +1,37 @@
 [
   {
     "key": "ctrl+cmd+b",
-    "command": "workbench.action.toggleActivityBarVisibility"
+    "command": "workbench.action.toggleActivityBarVisibility",
   },
   {
-    "key": "ctrl+d",
-    "command": "vscode-neovim.send",
-    "args": "<c-d>",
-    "when": "editorTextFocus && neovim.init"
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility",
   },
   {
-    "key": "ctrl+u",
-    "command": "vscode-neovim.send",
-    "args": "<c-u>",
-    "when": "editorTextFocus && neovim.init"
+    "key": "shift+k",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus",
   },
-
   {
     "key": "ctrl+j",
     "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
   },
   {
     "key": "ctrl+k",
     "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-  }
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
+  },
+  {
+    "key": "tab",
+    "command": "workbench.action.nextEditor",
+  },
+  {
+    "key": "shift+tab",
+    "command": "workbench.action.previousEditor",
+  },
+  {
+    "key": "ctrl+q",
+    "command": "workbench.action.closeActiveEditor",
+  },
 ]

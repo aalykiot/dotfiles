@@ -2,7 +2,7 @@
 
 These are the dotfiles that configure the tools I use in my system, and some installation scripts that automatically install all the following packages. I constantly try to improve my development workflow.
 
-### Setup (fedora)
+### Setup
 
 First, clone the repo in your `$HOME` directory:
 
@@ -15,8 +15,7 @@ then, run the installation script to install the required packages:
 ```sh
 $ cd dotfiles/ && ./fedora-setup.sh
 ```
-
-> For VS Code we need to manually symlink the config files: `ln -s <TARGET> <LINK-NAME>`
+> Run the `./macos-setup.sh` script when using MacOS.
 
 ## Tools and Packages
 
@@ -27,6 +26,6 @@ $ cd dotfiles/ && ./fedora-setup.sh
 - [Nerd Fonts](https://www.nerdfonts.com/) - Developer fonts with a high number of glyphs (icons).
 - [Ghostty](https://ghostty.org/) - A fast, feature-rich, and cross-platform terminal emulator.
 - [NeoVim](https://neovim.io/) - Hyperextensible Vim-based text editor.
-- [Zed](https://zed.dev/) - Zed is a next-generation code editor designed for high-performance.
+- [Visual Studio Code](https://code.visualstudio.com/) - The open source AI code editor.
 - [LazyGit](https://github.com/jesseduffield/lazygit) - Simple terminal UI for git commands.
 - [Tmux](https://github.com/tmux/tmux/wiki) - A terminal multiplexer.
