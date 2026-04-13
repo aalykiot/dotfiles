@@ -30,6 +30,7 @@ require('lazy').setup({
     require('plugins.dap'),
     require('plugins.trouble'),
     require('plugins.tmux'),
+    require('plugins.lazygit'),
     require('plugins.misc'),
     -- Themes
     require('themes.gruvbox'),
