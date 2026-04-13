@@ -27,9 +27,9 @@ font-size = 14
 
 # ======= THEMES =======
 
-theme = Ayu
+theme = Ultra Dark
 window-theme = dark
-macos-titlebar-style = native
+macos-titlebar-style = tabs
 
 # theme = Ayu
 # window-theme = dark
