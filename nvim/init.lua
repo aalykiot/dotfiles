@@ -17,9 +17,6 @@ require('keymaps')
 vim.keymap.set('n', '<leader>L', '<cmd>Lazy<CR>', { desc = 'Open lazy.nvim UI' })
 
 require('lazy').setup({
-    require('themes.gruvbox'),
-    require('themes.rose-pine'),
-    require('themes.vscode'),
     require('plugins.neotree'),
     require('plugins.treesitter'),
     require('plugins.snacks'),
@@ -33,7 +30,12 @@ require('lazy').setup({
     require('plugins.tmux'),
     require('plugins.which-key'),
     require('plugins.misc'),
+    require('themes.gruvbox'),
+    require('themes.rose-pine'),
+    require('themes.vscode'),
+    require('themes.catppuccin'),
+    require('themes.sonokai'),
 })
 
 -- Set default theme
-vim.cmd.colorscheme('gruvbox-material')
+vim.cmd.colorscheme('catppuccin-macchiato')

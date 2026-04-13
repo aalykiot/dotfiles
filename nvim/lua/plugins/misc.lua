@@ -143,4 +143,19 @@ return {
             vim.keymap.set('n', 'S', '<Plug>(leap-from-window)')
         end,
     },
+    -- Line indicator for indent
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        main = 'ibl',
+        config = function()
+            require('ibl').setup({
+                scope = {
+                    enabled = false,
+                },
+                indent = {
+                    char = '│',
+                },
+            })
+        end,
+    },
 }
