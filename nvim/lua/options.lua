@@ -2,50 +2,68 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Set to true if a nerd font is user
 vim.g.have_nerd_font = true
 
--- Enable line numbers / mouse mode
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.mouse = 'a'
-vim.opt.showmode = true
-vim.opt.cmdheight = 0
+vim.opt.cursorline = false -- highlight cursor line
+vim.opt.wrap = false
+vim.opt.scrolloff = 10
+vim.opt.sidescrolloff = 10
+
+-- Tabs, spaces and identation
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.smartindent = true -- smart auto-ident
+vim.opt.autoindent = true -- copy ident from current line
+vim.opt.list = true
+vim.opt.listchars = { tab = '  ', trail = '·', nbsp = '␣' }
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true -- case sensitive if uppercase
+vim.opt.hlsearch = true -- highlight search results
+vim.opt.incsearch = true -- show matches as you type
+
+vim.opt.signcolumn = 'yes' -- show the sign column
+vim.opt.showmatch = true -- highlight matching brackets
+vim.opt.cmdheight = 0 -- hide command line
+vim.opt.completeopt = "menuone,noinsert,noselect" -- completion options
+vim.opt.lazyredraw = true -- do not redraw during macros
 
 -- Sync clipboard between OS and Neovim
 vim.schedule(function()
     vim.opt.clipboard = 'unnamedplus'
 end)
 
--- Wrap text
-vim.opt.wrap = false
-vim.opt.breakindent = true
+-- Handle undo directory
+local undodir = vim.fn.expand('~/.vim/undodir')
+if vim.fn.isdirectory(undodir) == 0 then
+	vim.fn.mkdir(undodir, 'p')
+end
 
-vim.opt.undofile = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+vim.opt.backup = false -- do not create a backup file
+vim.opt.writebackup = false
+vim.opt.swapfile = false
+vim.opt.undofile = true -- use undo files
+vim.opt.undodir = undodir
+vim.opt.autoread = true -- auto-reload changes if outside neovim
+vim.opt.autowrite = false -- do not auto save
 
-vim.opt.signcolumn = 'yes'
+vim.opt.updatetime = 300 -- faster completions
+vim.opt.timeoutlen = 500
 
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
+vim.opt.errorbells = false -- no error sounds
+vim.opt.backspace = 'indent,eol,start' -- better backspace behaviour
+vim.opt.autochdir = false -- do not auto change directories
+vim.opt.iskeyword:append('-') -- consider kebab case a single word
+vim.opt.selection = 'inclusive'
+vim.opt.encoding = 'utf-8'
 
--- Time
-vim.opt.updatetime = 200
-vim.opt.timeoutlen = 300
+vim.opt.splitbelow = true -- horizontal splits go bellow
+vim.opt.splitright = true -- vertical splits go right
 
--- Splits
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-
--- White space indication
-vim.opt.list = true
-vim.opt.listchars = { tab = '  ', trail = '·', nbsp = '␣' }
-
-vim.opt.inccommand = 'split'
-
--- Lines and cursrors
-vim.opt.cursorline = false
-vim.opt.scrolloff = 10
+vim.opt.wildmenu = true -- tab completion
+vim.opt.redrawtime = 10000 -- increase neovim redraw tolerance
+vim.opt.maxmempattern = 20000 -- increase max memory

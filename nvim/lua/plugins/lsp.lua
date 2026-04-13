@@ -5,7 +5,7 @@ return {
         'williamboman/mason-lspconfig.nvim',
         'WhoIsSethDaniel/mason-tool-installer.nvim',
         'neovim/nvim-lspconfig',
-        'hrsh7th/cmp-nvim-lsp',
+        'saghen/blink.cmp',
         {
             'folke/lazydev.nvim',
             ft = 'lua', -- only load on lua files
@@ -19,9 +19,10 @@ return {
         },
     },
     config = function()
-        -- Add cmp capabilities to lsp_config
+        -- Add blink capabilities to lsp_config
+        local capabilities = require('blink.cmp').get_lsp_capabilities()
         local lspconfig_defaults = require('lspconfig').util.default_config
-        lspconfig_defaults.capabilities = vim.tbl_deep_extend('force', lspconfig_defaults.capabilities, require('cmp_nvim_lsp').default_capabilities())
+        lspconfig_defaults.capabilities = vim.tbl_deep_extend('force', lspconfig_defaults.capabilities, capabilities)
 
         -- Setup keymaps
         vim.api.nvim_create_autocmd('LspAttach', {

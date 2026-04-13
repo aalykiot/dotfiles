@@ -17,10 +17,12 @@ require('keymaps')
 vim.keymap.set('n', '<leader>L', '<cmd>Lazy<CR>', { desc = 'Open lazy.nvim UI' })
 
 require('lazy').setup({
+    -- Core plugins
+    require('plugins.which-key'),
     require('plugins.neotree'),
     require('plugins.treesitter'),
     require('plugins.snacks'),
-    require('plugins.suggestions'),
+    require('plugins.completion'),
     require('plugins.mini'),
     require('plugins.lsp'),
     require('plugins.format'),
@@ -28,8 +30,8 @@ require('lazy').setup({
     require('plugins.dap'),
     require('plugins.trouble'),
     require('plugins.tmux'),
-    require('plugins.which-key'),
     require('plugins.misc'),
+    -- Themes
     require('themes.gruvbox'),
     require('themes.rose-pine'),
     require('themes.vscode'),
