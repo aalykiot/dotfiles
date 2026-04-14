@@ -29,6 +29,13 @@ return {
                 use_nvim_cmp_as_default = true,
                 nerd_font_variant = 'mono',
             },
+            -- Always show buffer completions
+            -- https://cmp.saghen.dev/configuration/sources.html#show-buffer-completions-with-lsp
+            sources = {
+                providers = {
+                    lsp = { fallbacks = {} },
+                },
+            },
         })
     end,
 }
