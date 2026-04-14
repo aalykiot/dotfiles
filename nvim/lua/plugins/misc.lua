@@ -149,6 +149,7 @@ return {
         main = 'ibl',
         config = function()
             require('ibl').setup({
+                enabled = false,
                 scope = {
                     enabled = false,
                 },
