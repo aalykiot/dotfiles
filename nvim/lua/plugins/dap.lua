@@ -24,13 +24,15 @@ return {
         vim.keymap.set('n', '<F3>', dap.step_out, { desc = 'Debug: Step Out' })
         vim.keymap.set('n', '<F7>', dapui.toggle, { desc = 'Debug: See last session result' })
 
+        vim.fn.sign_define('DapBreakpoint', { text = '🔧' })
+
         -- Show variable under cursor
         vim.keymap.set('n', '<space>?', function()
             ---@diagnostic disable-next-line: missing-fields
             dapui.eval(nil, { enter = true })
         end)
 
-        -- Try to autmatically install required debuggers
+        -- Try to automatically install required debuggers
         require('mason-nvim-dap').setup({
             automatic_installation = true,
             handlers = {},
