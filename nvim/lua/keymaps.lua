@@ -12,6 +12,10 @@ vim.keymap.set('n', '<leader>-', '<C-a>', { desc = 'Decrement number' })
 -- Awesome pasting remap (don't replace copy buffer on paste)
 vim.keymap.set('n', '<leader>p', '"_dP')
 
+-- Navigation (move cursor to the middle when jumping)
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+
 -- Split navigation
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
