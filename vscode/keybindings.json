@@ -1,3 +1,4 @@
+// Place your key bindings in this file to override the defaults
 [
   {
     "key": "ctrl+cmd+b",
@@ -25,13 +26,25 @@
   {
     "key": "tab",
     "command": "workbench.action.nextEditor",
+    "when": "editorTextFocus && vim.mode != 'Insert'",
   },
   {
     "key": "shift+tab",
     "command": "workbench.action.previousEditor",
+    "when": "editorTextFocus && vim.mode != 'Insert'",
   },
   {
     "key": "ctrl+q",
     "command": "workbench.action.closeActiveEditor",
+  },
+  {
+    "key": "space f",
+    "command": "editor.action.formatDocument",
+    "when": "editorTextFocus && vim.mode != 'Insert'",
+  },
+  {
+    "key": "space w s v",
+    "command": "workbench.action.splitEditorRight",
+    "when": "editorTextFocus && vim.mode != 'Insert'",
   },
 ]
