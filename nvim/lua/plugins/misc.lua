@@ -1,12 +1,4 @@
 return {
-    -- Detect tabstop and shiftwidth automatically
-    'tpope/vim-sleuth',
-    -- Autopairs
-    {
-        'windwp/nvim-autopairs',
-        event = 'InsertEnter',
-        config = true,
-    },
     -- Transparent background
     {
         'xiyaowong/transparent.nvim',
@@ -99,6 +91,7 @@ return {
     -- Auto-close HTML tags
     {
         'windwp/nvim-ts-autotag',
+        enabled = true,
         config = function()
             require('nvim-ts-autotag').setup()
         end,
@@ -141,22 +134,6 @@ return {
             require('leap').setup({})
             vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap)')
             vim.keymap.set('n', 'S', '<Plug>(leap-from-window)')
-        end,
-    },
-    -- Line indicator for indent
-    {
-        'lukas-reineke/indent-blankline.nvim',
-        main = 'ibl',
-        config = function()
-            require('ibl').setup({
-                enabled = false,
-                scope = {
-                    enabled = false,
-                },
-                indent = {
-                    char = '│',
-                },
-            })
         end,
     },
 }

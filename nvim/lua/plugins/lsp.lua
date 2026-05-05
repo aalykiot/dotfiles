@@ -5,7 +5,7 @@ return {
         'williamboman/mason-lspconfig.nvim',
         'WhoIsSethDaniel/mason-tool-installer.nvim',
         'neovim/nvim-lspconfig',
-        'saghen/blink.cmp',
+        'hrsh7th/cmp-nvim-lsp',
         {
             'folke/lazydev.nvim',
             ft = 'lua', -- only load on lua files
@@ -19,11 +19,6 @@ return {
         },
     },
     config = function()
-        -- Add blink capabilities to lsp_config
-        local capabilities = require('blink.cmp').get_lsp_capabilities()
-        local lspconfig_defaults = require('lspconfig').util.default_config
-        lspconfig_defaults.capabilities = vim.tbl_deep_extend('force', lspconfig_defaults.capabilities, capabilities)
-
         -- Setup keymaps
         vim.api.nvim_create_autocmd('LspAttach', {
             desc = 'LSP actions',
@@ -54,9 +49,11 @@ return {
         -- LSP servers we want to be installed
         local ensure_installed = {
             'lua_ls',
-            'vtsls',
+            'ts_ls',
             'rust_analyzer',
         }
+
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
         -- Setup mason
         require('mason').setup()
@@ -66,7 +63,9 @@ return {
             automatic_installation = true,
             handlers = {
                 function(server_name)
-                    require('lspconfig')[server_name].setup({})
+                    require('lspconfig')[server_name].setup({
+                        capabilities = capabilities,
+                    })
                 end,
             },
         })
