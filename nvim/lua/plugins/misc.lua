@@ -1,4 +1,6 @@
 return {
+    -- Detect tabstop and shiftwidth automatically
+    'tpope/vim-sleuth',
     -- Transparent background
     {
         'xiyaowong/transparent.nvim',
