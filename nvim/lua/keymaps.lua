@@ -10,11 +10,19 @@ vim.keymap.set('n', '<leader>+', '<C-a>', { desc = 'Increment number' })
 vim.keymap.set('n', '<leader>-', '<C-a>', { desc = 'Decrement number' })
 
 -- Awesome pasting remap (don't replace copy buffer on paste)
-vim.keymap.set('n', '<leader>p', '"_dP')
+vim.keymap.set('x', 'p', [['_dP']])
 
 -- Navigation (move cursor to the middle when jumping)
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
+
+-- Move higlighted lines vertically
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected lines down' })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selected lines up' })
+
+-- Better indentation
+vim.keymap.set('v', '<', '<gv', { desc = 'Unindent and keep selection' })
+vim.keymap.set('v', '>', '>gv', { desc = 'Indent and keep selection' })
 
 -- Split navigation
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
@@ -30,12 +38,3 @@ vim.keymap.set('n', '<leader>wse', '<C-w>=', { desc = 'Make splits equal size' }
 -- Buffers
 vim.keymap.set('n', '<Tab>', '<cmd>bnext<CR>', { desc = 'Go to next open buffer' })
 vim.keymap.set('n', '<S-Tab>', '<cmd>bprevious<CR>', { desc = 'Go to previous open buffer' })
-
--- Hightlight when yanking
-vim.api.nvim_create_autocmd('TextYankPost', {
-    desc = 'Highlight when yanking (copying) text',
-    group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-    callback = function()
-        vim.highlight.on_yank()
-    end,
-})

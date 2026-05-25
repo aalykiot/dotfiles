@@ -20,6 +20,7 @@ vim.opt.smartindent = true -- smart auto-ident
 vim.opt.autoindent = true -- copy ident from current line
 vim.opt.list = true
 vim.opt.listchars = { tab = '  ', trail = '·', nbsp = '␣' }
+vim.opt.inccommand = 'split'
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true -- case sensitive if uppercase
@@ -29,18 +30,17 @@ vim.opt.incsearch = true -- show matches as you type
 vim.opt.signcolumn = 'yes' -- show the sign column
 vim.opt.showmatch = true -- highlight matching brackets
 vim.opt.cmdheight = 0 -- hide command line
-vim.opt.completeopt = "menuone,noinsert,noselect" -- completion options
+vim.opt.completeopt = 'menuone,noinsert,noselect' -- completion options
 vim.opt.lazyredraw = true -- do not redraw during macros
 
 -- Sync clipboard between OS and Neovim
-vim.schedule(function()
-    vim.opt.clipboard = 'unnamedplus'
-end)
+vim.opt.clipboard = 'unnamedplus'
+vim.opt.isfname:append('@-@')
 
 -- Handle undo directory
 local undodir = vim.fn.expand('~/.vim/undodir')
 if vim.fn.isdirectory(undodir) == 0 then
-	vim.fn.mkdir(undodir, 'p')
+    vim.fn.mkdir(undodir, 'p')
 end
 
 vim.opt.backup = false -- do not create a backup file
@@ -57,13 +57,23 @@ vim.opt.timeoutlen = 500
 vim.opt.errorbells = false -- no error sounds
 vim.opt.backspace = 'indent,eol,start' -- better backspace behaviour
 vim.opt.autochdir = false -- do not auto change directories
-vim.opt.iskeyword:append('-') -- consider kebab case a single word
 vim.opt.selection = 'inclusive'
 vim.opt.encoding = 'utf-8'
 
+-- vim.opt.guicursor = '' -- Terminal controlled cursor
+vim.opt.termguicolors = true
 vim.opt.splitbelow = true -- horizontal splits go bellow
 vim.opt.splitright = true -- vertical splits go right
 
 vim.opt.wildmenu = true -- tab completion
 vim.opt.redrawtime = 10000 -- increase neovim redraw tolerance
 vim.opt.maxmempattern = 20000 -- increase max memory
+
+-- Hightlight when yanking
+vim.api.nvim_create_autocmd('TextYankPost', {
+    desc = 'Highlight when yanking (copying) text',
+    group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+})
