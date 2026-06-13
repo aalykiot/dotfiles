@@ -44,4 +44,4 @@ require('lazy').setup({
 })
 
 -- Set default theme
-vim.cmd.colorscheme('catppuccin-macchiato')
+vim.cmd.colorscheme('rose-pine-moon')
