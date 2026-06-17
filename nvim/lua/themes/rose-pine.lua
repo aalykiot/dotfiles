@@ -1,6 +1,7 @@
 return {
     'rose-pine/neovim',
     name = 'rose-pine',
+    lazy = true,
     config = function()
         -- Fine tune the theme
         require('rose-pine').setup({

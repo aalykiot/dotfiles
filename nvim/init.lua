@@ -1,5 +1,8 @@
+-- Enable Neovim's bytecode cache
+vim.loader.enable()
+
 -- Enable the new UI
-require('vim._core.ui2').enable({})
+require('vim._core.ui2').enable()
 
 -- Install lazy.nvim plugin manager
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'

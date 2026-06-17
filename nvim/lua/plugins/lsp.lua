@@ -53,8 +53,8 @@ return {
 
         -- LSP servers we want to be installed
         local ensure_installed = {
+            'vtsls',
             'lua_ls',
-            'ts_ls',
             'rust_analyzer',
         }
 

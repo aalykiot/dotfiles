@@ -1,7 +1,6 @@
 return {
     'sainnhe/sonokai',
-    lazy = false,
-    priority = 1000,
+    lazy = true,
     config = function()
         vim.g.sonokai_enable_italic = false
         vim.g.sonokai_transparent_background = 1
