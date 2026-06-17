@@ -1,4 +1,4 @@
--- Enable Neovim's bytecode cache
+-- Enable lua module caching
 vim.loader.enable()
 
 -- Enable the new UI
