@@ -4,8 +4,8 @@ return {
         -- Init 'snacks' plugin
         local snacks = require('snacks')
         local custom_keys = {
-            ['<C-b>'] = { 'edit_vsplit', mode = { 'n', 'i' } },
-            ['<C-v>'] = { 'edit_split', mode = { 'n', 'i' } },
+            ['<C-h>'] = { 'edit_split', mode = { 'n', 'i' } },
+            ['<C-v>'] = { 'edit_vsplit', mode = { 'n', 'i' } },
         }
 
         -- Replace `vim.ui.select` with the snacks picker
