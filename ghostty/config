@@ -27,11 +27,9 @@ font-size = 14
 
 # ======= THEMES =======
 
-theme = Ultra Dark
-window-theme = dark
-macos-titlebar-style = tabs
-
 # theme = Ayu
+# theme = Iceberg Dark
+
 # window-theme = dark
 # background-opacity = 0.92
 # background-blur = false
