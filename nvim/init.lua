@@ -36,14 +36,11 @@ require('lazy').setup({
     require('plugins.dap'),
     require('plugins.trouble'),
     require('plugins.tmux'),
-    require('plugins.lazygit'),
     require('plugins.misc'),
     -- Themes
-    require('themes.gruvbox'),
-    require('themes.rose-pine'),
-    require('themes.vscode'),
     require('themes.catppuccin'),
-    require('themes.sonokai'),
+    require('themes.rose-pine'),
+    require('themes.gruvbox'),
 })
 
 -- Set default theme
