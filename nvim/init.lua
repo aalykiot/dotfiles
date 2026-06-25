@@ -44,4 +44,5 @@ require('lazy').setup({
 })
 
 -- Set default theme
-vim.cmd.colorscheme('catppuccin-macchiato')
+local theme = os.getenv('NVIM_THEME') or 'gruvbox-material'
+vim.cmd.colorscheme(theme)
