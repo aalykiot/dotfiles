@@ -6,7 +6,8 @@ vim.g.have_nerd_font = true
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.cursorline = false -- highlight cursor line
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
 vim.opt.wrap = false
 vim.opt.scrolloff = 10
 vim.opt.sidescrolloff = 10
