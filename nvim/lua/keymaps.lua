@@ -10,7 +10,7 @@ vim.keymap.set('n', '<leader>+', '<C-a>', { desc = 'Increment number' })
 vim.keymap.set('n', '<leader>-', '<C-a>', { desc = 'Decrement number' })
 
 -- Awesome pasting remap (don't replace copy buffer on paste)
-vim.keymap.set('x', 'p', [['_dP']])
+vim.keymap.set('n', '<leader>p', '"_dP')
 
 -- Navigation (move cursor to the middle when jumping)
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
