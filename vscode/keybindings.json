@@ -7,7 +7,7 @@
   {
     "key": "space e",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode != 'Insert'"
+    "when": "editorTextFocus && vim.mode != 'Insert'"
   },
   {
     "key": "shift+k",
@@ -63,7 +63,7 @@
   {
     "key": "space p",
     "command": "workbench.action.showCommands",
-    "when": "vim.mode != 'Insert'",
+    "when": "editorTextFocus && vim.mode != 'Insert'",
   },
   {
     "key": "space w s v",
