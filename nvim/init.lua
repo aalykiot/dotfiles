@@ -41,6 +41,7 @@ require('lazy').setup({
     require('themes.catppuccin'),
     require('themes.rose-pine'),
     require('themes.gruvbox'),
+    require('themes.tokyo-night'),
 })
 
 -- Set default theme
