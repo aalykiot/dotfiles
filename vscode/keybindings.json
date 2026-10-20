@@ -1,29 +1,23 @@
-// Place your key bindings in this file to override the defaults
 [
   {
     "key": "ctrl+b",
-    "command": "workbench.action.toggleActivityBarVisibility",
-  },
-  {
-    "key": "space e",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "editorTextFocus && vim.mode != 'Insert'"
+    "command": "workbench.action.toggleActivityBarVisibility"
   },
   {
     "key": "shift+k",
     "command": "editor.action.showHover",
-    "when": "editorTextFocus && vim.mode != 'Insert'",
+    "when": "editorTextFocus && vim.mode != 'Insert'"
   },
   // Code suggestions.
   {
     "key": "ctrl+j",
     "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
     "key": "ctrl+k",
     "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
+    "when": "(suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus) || (suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion)"
   },
   // Quick Open: navigate files.
   {
@@ -33,41 +27,78 @@
   },
   {
     "key": "ctrl+k",
+    "command": "workbench.action.navigateUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+k",
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
   },
+  // Navigate between workbench panes.
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown",
+    "when": "!suggestWidgetVisible && !inQuickOpen && !terminalFocus && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp",
+    "when": "!suggestWidgetVisible && !inQuickOpen && !terminalFocus && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
+  },
+  // Switch between editor tabs.
   {
     "key": "tab",
     "command": "workbench.action.nextEditor",
-    "when": "editorTextFocus && vim.mode != 'Insert'",
+    "when": "editorTextFocus && vim.mode != 'Insert'"
   },
   {
     "key": "shift+tab",
     "command": "workbench.action.previousEditor",
-    "when": "editorTextFocus && vim.mode != 'Insert'",
+    "when": "editorTextFocus && vim.mode != 'Insert'"
   },
+  // Close active editor.
   {
     "key": "ctrl+q",
-    "command": "workbench.action.closeActiveEditor",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  // Space leader shortcuts.
+  {
+    "key": "space e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "(activeEditorGroupEmpty && !inputFocus) || (editorFocus && vim.mode != 'Insert')"
   },
   {
     "key": "space f",
     "command": "editor.action.formatDocument",
-    "when": "editorTextFocus && vim.mode != 'Insert'",
+    "when": "(activeEditorGroupEmpty && !inputFocus) || (editorFocus && vim.mode != 'Insert')"
   },
   {
     "key": "space s f",
     "command": "workbench.action.quickOpen",
-    "when": "editorTextFocus && vim.mode != 'Insert'",
+    "when": "(activeEditorGroupEmpty && !inputFocus) || (editorFocus && vim.mode != 'Insert')"
   },
   {
     "key": "space p",
     "command": "workbench.action.showCommands",
-    "when": "editorTextFocus && vim.mode != 'Insert'",
+    "when": "(activeEditorGroupEmpty && !inputFocus) || (editorFocus && vim.mode != 'Insert')"
   },
   {
     "key": "space w s v",
     "command": "workbench.action.splitEditorRight",
-    "when": "editorTextFocus && vim.mode != 'Insert'",
+    "when": "(activeEditorGroupEmpty && !inputFocus) || (editorFocus && vim.mode != 'Insert')"
   },
+  {
+    "key": "space w s h",
+    "command": "workbench.action.splitEditorDown",
+    "when": "(activeEditorGroupEmpty && !inputFocus) || (editorFocus && vim.mode != 'Insert')"
+  }
 ]
