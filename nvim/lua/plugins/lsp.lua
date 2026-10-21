@@ -6,6 +6,9 @@ return {
         'WhoIsSethDaniel/mason-tool-installer.nvim',
         'neovim/nvim-lspconfig',
         'hrsh7th/cmp-nvim-lsp',
+        'seblyng/roslyn.nvim',
+        'jay-babu/mason-nvim-dap.nvim',
+
         {
             'folke/lazydev.nvim',
             ft = 'lua', -- only load on lua files
@@ -61,7 +64,13 @@ return {
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
         -- Setup mason
-        require('mason').setup()
+        require('mason').setup({
+            registries = {
+                'github:mason-org/mason-registry',
+                'github:Crashdummyy/mason-registry',
+            },
+        })
+
         require('mason-lspconfig').setup({
             ensure_installed = ensure_installed,
             automatic_enable = true,
@@ -74,11 +83,15 @@ return {
             },
         })
 
-        -- Install linters manually
         require('mason-tool-installer').setup({
             ensure_installed = {
                 'eslint_d',
+                'roslyn', -- C# LSP
             },
+        })
+
+        require('roslyn').setup({
+            ft = { 'cs' },
         })
 
         -- Setup keymap to open mason UI

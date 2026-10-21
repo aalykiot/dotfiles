@@ -5,8 +5,8 @@ return {
         'rcarriga/nvim-dap-ui',
         'nvim-neotest/nvim-nio',
         'williamboman/mason.nvim',
-        'jay-babu/mason-nvim-dap.nvim',
         'theHamsta/nvim-dap-virtual-text',
+        'Cliffback/netcoredbg-macOS-arm64.nvim',
     },
     config = function()
         local dap = require('dap')
@@ -36,7 +36,13 @@ return {
         -- Try to automatically install required debuggers
         require('mason-nvim-dap').setup({
             automatic_installation = true,
-            handlers = {},
+            handlers = {
+                function(config)
+                    require('mason-nvim-dap').default_setup(config)
+                end,
+                -- C# is handled by netcoredbg-macOS-arm64.nvim in dap.lua
+                coreclr = function() end,
+            },
             ensure_installed = {
                 'js-debug-adapter', -- Node.js
                 'codelldb', -- Rust
@@ -44,24 +50,23 @@ return {
         })
 
         -- Configure DAP adapters
-        dap.adapters = {
-            ['pwa-node'] = {
-                type = 'server',
-                host = '::1',
-                port = '${port}',
-                executable = {
-                    command = 'js-debug-adapter',
-                    args = { '${port}' },
-                },
+        dap.adapters['pwa-node'] = {
+            type = 'server',
+            host = '::1',
+            port = '${port}',
+            executable = {
+                command = 'js-debug-adapter',
+                args = { '${port}' },
             },
-            ['lldb'] = {
-                type = 'server',
-                port = '${port}',
-                executable = {
-                    command = 'codelldb',
-                    args = { '--port', '${port}' },
-                    detached = false,
-                },
+        }
+
+        dap.adapters.lldb = {
+            type = 'server',
+            port = '${port}',
+            executable = {
+                command = 'codelldb',
+                args = { '--port', '${port}' },
+                detached = false,
             },
         }
 
@@ -71,6 +76,8 @@ return {
 
         -- Setup dap-ui and virtual text
         dapui.setup()
+
+        require('netcoredbg-macOS-arm64').setup(dap)
         require('nvim-dap-virtual-text').setup({})
     end,
 }

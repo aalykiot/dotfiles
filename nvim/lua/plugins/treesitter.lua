@@ -7,11 +7,14 @@ return {
     init = function()
         -- Enable highlighting
         vim.api.nvim_create_autocmd('FileType', {
-            callback = function()
+            callback = function(ctx)
                 -- Enable treesitter highlighting and disable regex syntax
                 pcall(vim.treesitter.start)
-                -- Enable treesitter-based indentation
-                vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+                -- Enable treesitter-based indentation (exlcude C#)
+                local noIndent = { 'cs' }
+                if not vim.list_contains(noIndent, ctx.match) then
+                    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+                end
             end,
         })
         -- Ensure installed parsers
