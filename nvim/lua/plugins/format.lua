@@ -18,6 +18,24 @@ return {
                 css = { 'prettier' },
                 json = { 'prettier' },
                 yaml = { 'prettier' },
+                cs = { 'csharpier' },
+            },
+            formatters = {
+                csharpier = {
+                    -- only run when a csharpier config is found
+                    cwd = require('conform.util').root_file({
+                        '.csharpierrc',
+                        '.csharpierrc.json',
+                        '.csharpierrc.yaml',
+                    }),
+                    command = vim.fn.expand('$MASON/bin') .. '/' .. 'csharpier',
+                    args = {
+                        'format',
+                        '--write-stdout',
+                    },
+                    to_stdin = true,
+                    require_cwd = true,
+                },
             },
         })
 

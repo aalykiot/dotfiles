@@ -87,6 +87,7 @@ return {
             ensure_installed = {
                 'eslint_d',
                 'roslyn', -- C# LSP
+                'csharpier', -- C# Formatter
             },
         })
 
