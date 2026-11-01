@@ -1,7 +1,6 @@
 -- https://www.qu8n.com/posts/treesitter-migration-guide-for-nvim-0-12
 return {
     'nvim-treesitter/nvim-treesitter',
-    branch = 'main',
     lazy = false,
     build = ':TSUpdate',
     init = function()
@@ -17,8 +16,8 @@ return {
                 end
             end,
         })
-        -- Ensure installed parsers
-        local ensure_installed = {
+
+        require('nvim-treesitter').install({
             'bash',
             'lua',
             'luadoc',
@@ -28,13 +27,6 @@ return {
             'typescript',
             'rust',
             'c_sharp',
-        }
-        local alreadyInstalled = require('nvim-treesitter.config').get_installed()
-        local parsersToInstall = vim.iter(ensure_installed)
-            :filter(function(parser)
-                return not vim.tbl_contains(alreadyInstalled, parser)
-            end)
-            :totable()
-        require('nvim-treesitter').install(parsersToInstall)
+        })
     end,
 }
