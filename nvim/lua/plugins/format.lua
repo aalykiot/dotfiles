@@ -33,7 +33,7 @@ return {
                         'format',
                         '--write-stdout',
                     },
-                    to_stdin = true,
+                    stdin = true,
                     require_cwd = true,
                 },
             },
